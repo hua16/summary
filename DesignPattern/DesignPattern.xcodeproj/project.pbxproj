@@ -38,6 +38,13 @@
 		C646C11F1D9D001A001125B9 /* LHEveningState.m in Sources */ = {isa = PBXBuildFile; fileRef = C646C11E1D9D001A001125B9 /* LHEveningState.m */; };
 		C646C1221D9D0035001125B9 /* LHSleepingState.m in Sources */ = {isa = PBXBuildFile; fileRef = C646C1211D9D0035001125B9 /* LHSleepingState.m */; };
 		C646C1251D9D0051001125B9 /* LHRestState.m in Sources */ = {isa = PBXBuildFile; fileRef = C646C1241D9D0051001125B9 /* LHRestState.m */; };
+		C64763531E48748D007B8283 /* LHStrategyController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64763511E48748D007B8283 /* LHStrategyController.m */; };
+		C64763541E48748D007B8283 /* LHStrategyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C64763521E48748D007B8283 /* LHStrategyController.xib */; };
+		C64763571E488644007B8283 /* CashSuper.m in Sources */ = {isa = PBXBuildFile; fileRef = C64763561E488644007B8283 /* CashSuper.m */; };
+		C647635A1E4886A4007B8283 /* CashNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = C64763591E4886A4007B8283 /* CashNormal.m */; };
+		C647635D1E4886BA007B8283 /* CashRebate.m in Sources */ = {isa = PBXBuildFile; fileRef = C647635C1E4886BA007B8283 /* CashRebate.m */; };
+		C64763601E4886CA007B8283 /* CashReturn.m in Sources */ = {isa = PBXBuildFile; fileRef = C647635F1E4886CA007B8283 /* CashReturn.m */; };
+		C64763631E48877C007B8283 /* CashFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C64763621E48877C007B8283 /* CashFactory.m */; };
 		C690F9411D99330A00B5436A /* LHResume.m in Sources */ = {isa = PBXBuildFile; fileRef = C690F9401D99330A00B5436A /* LHResume.m */; };
 		C690F9451D9A05CA00B5436A /* LHTestPaper.m in Sources */ = {isa = PBXBuildFile; fileRef = C690F9441D9A05CA00B5436A /* LHTestPaper.m */; };
 		C690F9491D9A22FD00B5436A /* LHTestPaperA.m in Sources */ = {isa = PBXBuildFile; fileRef = C690F9481D9A22FD00B5436A /* LHTestPaperA.m */; };
@@ -124,6 +131,19 @@
 		C646C1211D9D0035001125B9 /* LHSleepingState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHSleepingState.m; sourceTree = "<group>"; };
 		C646C1231D9D0051001125B9 /* LHRestState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHRestState.h; sourceTree = "<group>"; };
 		C646C1241D9D0051001125B9 /* LHRestState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHRestState.m; sourceTree = "<group>"; };
+		C64763501E48748D007B8283 /* LHStrategyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHStrategyController.h; sourceTree = "<group>"; };
+		C64763511E48748D007B8283 /* LHStrategyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHStrategyController.m; sourceTree = "<group>"; };
+		C64763521E48748D007B8283 /* LHStrategyController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LHStrategyController.xib; sourceTree = "<group>"; };
+		C64763551E488644007B8283 /* CashSuper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashSuper.h; sourceTree = "<group>"; };
+		C64763561E488644007B8283 /* CashSuper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashSuper.m; sourceTree = "<group>"; };
+		C64763581E4886A4007B8283 /* CashNormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashNormal.h; sourceTree = "<group>"; };
+		C64763591E4886A4007B8283 /* CashNormal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashNormal.m; sourceTree = "<group>"; };
+		C647635B1E4886BA007B8283 /* CashRebate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashRebate.h; sourceTree = "<group>"; };
+		C647635C1E4886BA007B8283 /* CashRebate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashRebate.m; sourceTree = "<group>"; };
+		C647635E1E4886CA007B8283 /* CashReturn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashReturn.h; sourceTree = "<group>"; };
+		C647635F1E4886CA007B8283 /* CashReturn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashReturn.m; sourceTree = "<group>"; };
+		C64763611E48877C007B8283 /* CashFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashFactory.h; sourceTree = "<group>"; };
+		C64763621E48877C007B8283 /* CashFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashFactory.m; sourceTree = "<group>"; };
 		C690F93F1D99330A00B5436A /* LHResume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHResume.h; sourceTree = "<group>"; };
 		C690F9401D99330A00B5436A /* LHResume.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHResume.m; sourceTree = "<group>"; };
 		C690F9431D9A05CA00B5436A /* LHTestPaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHTestPaper.h; sourceTree = "<group>"; };
@@ -186,6 +206,7 @@
 				C60935281D960BA400FF2911 /* AppDelegate.m */,
 				C609352A1D960BA400FF2911 /* ViewController.h */,
 				C609352B1D960BA400FF2911 /* ViewController.m */,
+				C647634F1E48743C007B8283 /* Strategy */,
 				C6174CF11DAB244500E99B1E /* Composite */,
 				C646C10D1D9CF06A001125B9 /* StateModel */,
 				C646C0CD1D9C9AD1001125B9 /* AbstractFactory */,
@@ -333,6 +354,26 @@
 			path = StateModel;
 			sourceTree = "<group>";
 		};
+		C647634F1E48743C007B8283 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				C64763501E48748D007B8283 /* LHStrategyController.h */,
+				C64763511E48748D007B8283 /* LHStrategyController.m */,
+				C64763521E48748D007B8283 /* LHStrategyController.xib */,
+				C64763611E48877C007B8283 /* CashFactory.h */,
+				C64763621E48877C007B8283 /* CashFactory.m */,
+				C64763551E488644007B8283 /* CashSuper.h */,
+				C64763561E488644007B8283 /* CashSuper.m */,
+				C64763581E4886A4007B8283 /* CashNormal.h */,
+				C64763591E4886A4007B8283 /* CashNormal.m */,
+				C647635B1E4886BA007B8283 /* CashRebate.h */,
+				C647635C1E4886BA007B8283 /* CashRebate.m */,
+				C647635E1E4886CA007B8283 /* CashReturn.h */,
+				C647635F1E4886CA007B8283 /* CashReturn.m */,
+			);
+			path = Strategy;
+			sourceTree = "<group>";
+		};
 		C690F93E1D9932E100B5436A /* Prototype */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,7 +458,7 @@
 		C60935191D960BA400FF2911 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = huage;
 				TargetAttributes = {
 					C60935201D960BA400FF2911 = {
@@ -461,6 +502,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64763541E48748D007B8283 /* LHStrategyController.xib in Resources */,
 				C60935341D960BA400FF2911 /* LaunchScreen.storyboard in Resources */,
 				C60935311D960BA400FF2911 /* Assets.xcassets in Resources */,
 				C609352F1D960BA400FF2911 /* Main.storyboard in Resources */,
@@ -490,6 +532,7 @@
 			files = (
 				C6174CFA1DAB244500E99B1E /* LHCompany.m in Sources */,
 				C609355C1D960C7300FF2911 /* LHPerson.m in Sources */,
+				C647635A1E4886A4007B8283 /* CashNormal.m in Sources */,
 				C646C1011D9CB453001125B9 /* LHAccessDepartment.m in Sources */,
 				C646C1041D9CB453001125B9 /* LHSqlServerDepartment.m in Sources */,
 				C646C1101D9CF084001125B9 /* LHWork.m in Sources */,
@@ -503,18 +546,23 @@
 				C646C1051D9CB453001125B9 /* LHAccessUser.m in Sources */,
 				C690F9451D9A05CA00B5436A /* LHTestPaper.m in Sources */,
 				C646C11C1D9CFFA4001125B9 /* LHAfternoonState.m in Sources */,
+				C647635D1E4886BA007B8283 /* CashRebate.m in Sources */,
 				C690F9411D99330A00B5436A /* LHResume.m in Sources */,
 				C646C1031D9CB453001125B9 /* LHIDepartment.m in Sources */,
+				C64763531E48748D007B8283 /* LHStrategyController.m in Sources */,
 				C6174CFD1DAB244500E99B1E /* LHHRDepartment.m in Sources */,
 				C646C1131D9CFF1F001125B9 /* LHState.m in Sources */,
 				C690F9491D9A22FD00B5436A /* LHTestPaperA.m in Sources */,
 				C646C1021D9CB453001125B9 /* LHDepartment.m in Sources */,
 				C6174CFB1DAB244500E99B1E /* LHConcreteCompany.m in Sources */,
+				C64763631E48877C007B8283 /* CashFactory.m in Sources */,
 				C60935261D960BA400FF2911 /* main.m in Sources */,
+				C64763571E488644007B8283 /* CashSuper.m in Sources */,
 				C646C1191D9CFF80001125B9 /* LHNoonState.m in Sources */,
 				C646C1061D9CB453001125B9 /* LHIUser.m in Sources */,
 				C646C1161D9CFF4B001125B9 /* LHForenoonState.m in Sources */,
 				C6174CFC1DAB244500E99B1E /* LHFinanceDepartment.m in Sources */,
+				C64763601E4886CA007B8283 /* CashReturn.m in Sources */,
 				C646C1251D9D0051001125B9 /* LHRestState.m in Sources */,
 				C690F94C1D9A230C00B5436A /* LHTestPaperB.m in Sources */,
 				C646C10C1D9CB4BF001125B9 /* LHDataAccess.m in Sources */,
@@ -586,8 +634,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -630,8 +680,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
