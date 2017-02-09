@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "LHStrategyController.h"
+
 #import "LHPerson.h"
 #import "LHFinery.h"
 #import "LHResume.h"
@@ -22,21 +24,17 @@
 #import "LHHRDepartment.h"
 #import "LHFinanceDepartment.h"
 
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
-@interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *dataArr;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self decorativePattern];
-//    [self prototypePattern];
-//    [self templateMethod];
-//    [self abstractFactory];
-//    [self stateModel];
-//    [self compositeMode];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,6 +43,7 @@
 
 //装饰模式
 - (void)decorativePattern {
+    
     LHPerson *xc = [[LHPerson alloc] initWithName:@"小菜"];
     NSLog(@"/n 第一种打扮：");
     LHFinery *dtx = [[LHTShirts alloc] init];
@@ -153,6 +152,62 @@
     
     NSLog(@"职责:");
     [root lineOfDuty];
+}
+
+#pragma mark - UITableViewDelegate, UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArr.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *reuseID = @"ReuseCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseID];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseID];
+        cell.textLabel.font = [UIFont systemFontOfSize:15.0];
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    cell.textLabel.text = [self.dataArr objectAtIndex: indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case 0: {
+            LHStrategyController *stategyVC = [[LHStrategyController alloc] initWithNibName:@"LHStrategyController" bundle:[NSBundle mainBundle]];
+            [self.navigationController pushViewController:stategyVC animated:YES];
+        }
+            break;
+        case 1:
+            [self decorativePattern];
+            break;
+        case 2:
+            [self prototypePattern];
+            break;
+        case 3:
+            [self templateMethod];
+            break;
+        case 4:
+            [self abstractFactory];
+            break;
+        case 5:
+            [self stateModel];
+            break;
+        case 6:
+            [self compositeMode];
+            break;
+        default:
+            break;
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - getter & setter
+- (NSArray *)dataArr {
+    if (!_dataArr) {
+        _dataArr = @[@"策略模式",@"装饰模式",@"原型模式",@"模板方法模式",@"抽象工厂模式",@"状态模式",@"组合模式"];
+    }
+    return _dataArr;
 }
 
 @end
