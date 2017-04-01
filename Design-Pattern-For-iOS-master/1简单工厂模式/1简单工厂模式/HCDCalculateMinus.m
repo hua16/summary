@@ -9,8 +9,7 @@
 #import "HCDCalculateMinus.h"
 
 @implementation HCDCalculateMinus
-@synthesize numberA = _numberA;
-@synthesize numberB = _numberB;
+
 -(CGFloat)calculate{
     return self.numberA - self.numberB;
 }

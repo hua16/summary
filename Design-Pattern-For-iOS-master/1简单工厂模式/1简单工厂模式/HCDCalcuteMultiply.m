@@ -9,8 +9,7 @@
 #import "HCDCalcuteMultiply.h"
 
 @implementation HCDCalcuteMultiply
-@synthesize numberA = _numberA;
-@synthesize numberB = _numberB;
+
 -(CGFloat)calculate{
     return self.numberA * self.numberB;
 }
