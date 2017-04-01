@@ -1,4 +1,4 @@
-//
+    //
 //  HCDCalcuteFactory.m
 //  1简单工厂模式
 //
@@ -15,7 +15,7 @@
 
 
 @implementation HCDCalcuteFactory
-+(id<HCDCalculate>)createCalcute:(NSString *)calculatetype{
++(HCDBaseCalculate<HCDCalculate> *)createCalcute:(NSString *)calculatetype{
     
     NSArray *calculateArray = @[@"+",@"-",@"*",@"/"];
     CalculateType calType = [calculateArray indexOfObject:calculatetype];

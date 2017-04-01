@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "HCDCalculate.h"
+#import "HCDBaseCalculate.h"
 
 
 @class CommonTool;
 @interface HCDCalcuteFactory : NSObject
 
-+(id<HCDCalculate>)createCalcute:(NSString *)calculatetype;
++(HCDBaseCalculate<HCDCalculate> *)createCalcute:(NSString *)calculatetype;
 @end

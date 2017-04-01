@@ -25,7 +25,7 @@
 
 
 - (IBAction)calculate:(id)sender {
-    id<HCDCalculate> cal;
+    HCDBaseCalculate<HCDCalculate> * cal;
     
     cal =[HCDCalcuteFactory createCalcute:self.countTextField.text];
     cal.numberA = [self.numberA.text floatValue];

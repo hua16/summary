@@ -20,6 +20,7 @@
 		4D8948B51B78CCE4008DDDD4 /* HCDCalculateDivide.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8948B41B78CCE4008DDDD4 /* HCDCalculateDivide.m */; };
 		4D8948B81B78CD66008DDDD4 /* HCDCalcuteFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8948B71B78CD66008DDDD4 /* HCDCalcuteFactory.m */; };
 		4D8948BB1B78D0B9008DDDD4 /* CommonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8948BA1B78D0B9008DDDD4 /* CommonTool.m */; };
+		C6149CDE1E88A80D008086D7 /* HCDBaseCalculate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6149CDD1E88A80D008086D7 /* HCDBaseCalculate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		4D8948B71B78CD66008DDDD4 /* HCDCalcuteFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDCalcuteFactory.m; sourceTree = "<group>"; };
 		4D8948B91B78D0B9008DDDD4 /* CommonTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTool.h; sourceTree = "<group>"; };
 		4D8948BA1B78D0B9008DDDD4 /* CommonTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTool.m; sourceTree = "<group>"; };
+		C6149CDC1E88A80D008086D7 /* HCDBaseCalculate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDBaseCalculate.h; sourceTree = "<group>"; };
+		C6149CDD1E88A80D008086D7 /* HCDBaseCalculate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDBaseCalculate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				4D8948A91B78C933008DDDD4 /* HCDCalculate.h */,
+				C6149CDC1E88A80D008086D7 /* HCDBaseCalculate.h */,
+				C6149CDD1E88A80D008086D7 /* HCDBaseCalculate.m */,
 				4D8948AA1B78CA65008DDDD4 /* HCDCalculateAdd.h */,
 				4D8948AB1B78CA65008DDDD4 /* HCDCalculateAdd.m */,
 				4D8948AD1B78CBF7008DDDD4 /* HCDCalculateMinus.h */,
@@ -266,6 +271,7 @@
 				4D8948851B78C792008DDDD4 /* main.m in Sources */,
 				4D8948AF1B78CBF7008DDDD4 /* HCDCalculateMinus.m in Sources */,
 				4D8948B21B78CC76008DDDD4 /* HCDCalcuteMultiply.m in Sources */,
+				C6149CDE1E88A80D008086D7 /* HCDBaseCalculate.m in Sources */,
 				4D8948B81B78CD66008DDDD4 /* HCDCalcuteFactory.m in Sources */,
 				4D8948B51B78CCE4008DDDD4 /* HCDCalculateDivide.m in Sources */,
 			);
