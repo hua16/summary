@@ -25,6 +25,12 @@
 
 
 - (IBAction)calculate:(id)sender {
+    //test是实例
+    LHCalcuteFactory *test = [LHCalcuteFactory new];
+    [test createCalcute:self.countTextField.text];
+    [test test];
+    //test实例不能去调用类方法
+    
     LHBaseCalculate<LHCalculate> * cal =[LHCalcuteFactory createCalcute:self.countTextField.text];
     cal.numberA = [self.numberA.text floatValue];
     cal.numberB = [self.numberB.text floatValue];

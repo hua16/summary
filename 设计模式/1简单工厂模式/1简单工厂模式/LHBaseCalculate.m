@@ -8,6 +8,13 @@
 
 #import "LHBaseCalculate.h"
 
-@implementation LHBaseCalculate
+@implementation LHBaseCalculate {
+    CGFloat a;
+}
+
+
+- (void)testA:(CGFloat)test {
+    a = test;
+}
 
 @end

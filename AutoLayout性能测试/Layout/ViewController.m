@@ -142,7 +142,7 @@
             make.bottom.mas_lessThanOrEqualTo(-40);
             make.left.mas_equalTo(leftView).offset(leftSpace).priorityMedium();
             make.top.mas_equalTo(topView).offset(topSpace).priorityMedium();
-            make.size.mas_equalTo(10);
+            make.size.mas_equalTo(30);
         }];
         
         [self.views addObject:newView];
@@ -181,7 +181,7 @@
         
         UIView *newView = [[UIView alloc] init];
         newView.backgroundColor = color;
-        newView.frame = CGRectMake(leftSpace, topSpace, 10, 10);
+        newView.frame = CGRectMake(leftSpace, topSpace, 30, 30);
         [self.view addSubview:newView];
         [self.views addObject:newView];
     }

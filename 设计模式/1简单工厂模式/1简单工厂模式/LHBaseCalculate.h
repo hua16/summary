@@ -15,4 +15,6 @@
 @property(nonatomic, assign) CGFloat numberA;
 @property(nonatomic, assign) CGFloat numberB; 
 
+- (void)testA:(CGFloat)test;
+
 @end
