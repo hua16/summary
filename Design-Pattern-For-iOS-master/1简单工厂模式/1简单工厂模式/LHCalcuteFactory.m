@@ -33,5 +33,21 @@
         case calcuteTypeDivide:
             return [[LHCalculateDivide alloc]init];
     }
+    [LHCalcuteFactory test3];
+    [[LHCalcuteFactory new]  test];
 }
+
++ (void)test3 {
+
+}
+
+- (void)test {
+    [LHCalcuteFactory createCalcute:@""];
+    [self test1];
+}
+
+- (void)test1 {
+    
+}
+
 @end

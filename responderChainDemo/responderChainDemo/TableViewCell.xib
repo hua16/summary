@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWh-CV-hk7">
+                        <rect key="frame" x="21" y="6" width="62" height="30"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="左边按钮">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="leftButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aOb-K7-nce"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jk-CJ-kfJ">
+                        <rect key="frame" x="234" y="6" width="62" height="30"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="右边按钮">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="rightButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="q87-Al-GbI"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EH-mm-a44">
+                        <rect key="frame" x="129" y="6" width="62" height="30"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="中间按钮">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="middelButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZoO-E9-9LK"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1EH-mm-a44" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3dG-OR-iQb"/>
+                    <constraint firstItem="1EH-mm-a44" firstAttribute="baseline" secondItem="YWh-CV-hk7" secondAttribute="baseline" id="41T-9Q-s3q"/>
+                    <constraint firstItem="1EH-mm-a44" firstAttribute="width" secondItem="0Jk-CJ-kfJ" secondAttribute="width" id="D8j-2Y-Afp"/>
+                    <constraint firstItem="1EH-mm-a44" firstAttribute="baseline" secondItem="0Jk-CJ-kfJ" secondAttribute="baseline" id="Fms-ST-ez8"/>
+                    <constraint firstItem="0Jk-CJ-kfJ" firstAttribute="leading" secondItem="1EH-mm-a44" secondAttribute="trailing" constant="43" id="RH3-Wu-eDW"/>
+                    <constraint firstItem="1EH-mm-a44" firstAttribute="leading" secondItem="YWh-CV-hk7" secondAttribute="trailing" constant="46" id="abp-Zj-4AZ"/>
+                    <constraint firstItem="1EH-mm-a44" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="c1e-a4-ZbU"/>
+                    <constraint firstItem="YWh-CV-hk7" firstAttribute="width" secondItem="1EH-mm-a44" secondAttribute="width" id="wAB-O0-sSc"/>
+                </constraints>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+</document>

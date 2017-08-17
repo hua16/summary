@@ -14,5 +14,9 @@
 @class CommonTool;
 @interface LHCalcuteFactory : NSObject
 
+//类方法
 +(LHBaseCalculate<LHCalculate> *)createCalcute:(NSString *)calculatetype;
+
+//实例方法
+- (void)test;
 @end

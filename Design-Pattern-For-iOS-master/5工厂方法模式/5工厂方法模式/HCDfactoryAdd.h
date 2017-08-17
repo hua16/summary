@@ -9,5 +9,5 @@
 #import "HCDfactory.h"
 
 @interface HCDfactoryAdd : HCDfactory
-·
+
 @end
