@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C63B22001FD51C2100A8C1C9 /* DBTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C63B21FF1FD51C2100A8C1C9 /* DBTestModel.m */; };
 		C6F4214B1FD13D93009F7D3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F4214A1FD13D93009F7D3E /* AppDelegate.m */; };
 		C6F4214E1FD13D93009F7D3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F4214D1FD13D93009F7D3E /* ViewController.m */; };
 		C6F421511FD13D93009F7D3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F4214F1FD13D93009F7D3E /* Main.storyboard */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		24152BD0AA2CE2472FF308BC /* Pods-CopyDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CopyDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CopyDemo/Pods-CopyDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		4689134B716DE98C603D072D /* Pods-CopyDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CopyDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CopyDemo/Pods-CopyDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C63B21FE1FD51C2100A8C1C9 /* DBTestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBTestModel.h; sourceTree = "<group>"; };
+		C63B21FF1FD51C2100A8C1C9 /* DBTestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBTestModel.m; sourceTree = "<group>"; };
 		C6F421461FD13D93009F7D3E /* CopyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F421491FD13D93009F7D3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6F4214A1FD13D93009F7D3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 				C6F421541FD13D93009F7D3E /* LaunchScreen.storyboard */,
 				C6F421571FD13D93009F7D3E /* Info.plist */,
 				C6F421581FD13D93009F7D3E /* main.m */,
+				C63B21FE1FD51C2100A8C1C9 /* DBTestModel.h */,
+				C63B21FF1FD51C2100A8C1C9 /* DBTestModel.m */,
 			);
 			path = CopyDemo;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 			files = (
 				C6F4214E1FD13D93009F7D3E /* ViewController.m in Sources */,
 				C6F421591FD13D93009F7D3E /* main.m in Sources */,
+				C63B22001FD51C2100A8C1C9 /* DBTestModel.m in Sources */,
 				C6F4217F1FD15CF4009F7D3E /* DBMovie.m in Sources */,
 				C6F4214B1FD13D93009F7D3E /* AppDelegate.m in Sources */,
 			);
