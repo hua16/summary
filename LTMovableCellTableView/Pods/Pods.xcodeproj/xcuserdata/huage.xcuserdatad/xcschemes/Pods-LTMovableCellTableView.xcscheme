@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "467AA1C0DAE166338BE0D3E35FB018E7"
-               BuildableName = "Pods_CopyDemo.framework"
-               BlueprintName = "Pods-CopyDemo"
+               BlueprintIdentifier = "0310C969E42EB3F864DF622BC8B2AD10"
+               BuildableName = "Pods_LTMovableCellTableView.framework"
+               BlueprintName = "Pods-LTMovableCellTableView"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "467AA1C0DAE166338BE0D3E35FB018E7"
-            BuildableName = "Pods_CopyDemo.framework"
-            BlueprintName = "Pods-CopyDemo"
+            BlueprintIdentifier = "0310C969E42EB3F864DF622BC8B2AD10"
+            BuildableName = "Pods_LTMovableCellTableView.framework"
+            BlueprintName = "Pods-LTMovableCellTableView"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

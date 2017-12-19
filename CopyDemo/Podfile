@@ -8,4 +8,5 @@ project 'CopyDemo.xcodeproj'
 target 'CopyDemo' do
     pod 'Mantle', '~> 2.0' 
     pod 'Masonry'
+    pod 'SDWebImage', :path => '/Users/huage/Documents/iOS/Learning/OCLearning/SDWebImage'
 end
