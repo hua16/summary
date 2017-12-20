@@ -12,6 +12,7 @@
 		C67EB6211FE8BC32007012F1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C67EB6201FE8BC32007012F1 /* HomeViewController.m */; };
 		C67EB6241FE8BCC3007012F1 /* UIAlertView+RWBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C67EB6221FE8BCC2007012F1 /* UIAlertView+RWBlock.m */; };
 		C67EB6271FE8BE84007012F1 /* UIView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C67EB6261FE8BE84007012F1 /* UIView+Snapshot.m */; };
+		C67EB62A1FE92440007012F1 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C67EB6291FE92440007012F1 /* CollectionViewCell.m */; };
 		C6A25E5C1FE7A924002B9CFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A25E5B1FE7A924002B9CFB /* AppDelegate.m */; };
 		C6A25E621FE7A924002B9CFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6A25E601FE7A924002B9CFB /* Main.storyboard */; };
 		C6A25E641FE7A924002B9CFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6A25E631FE7A924002B9CFB /* Assets.xcassets */; };
@@ -50,6 +51,8 @@
 		C67EB6231FE8BCC2007012F1 /* UIAlertView+RWBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+RWBlock.h"; sourceTree = "<group>"; };
 		C67EB6251FE8BE84007012F1 /* UIView+Snapshot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Snapshot.h"; sourceTree = "<group>"; };
 		C67EB6261FE8BE84007012F1 /* UIView+Snapshot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Snapshot.m"; sourceTree = "<group>"; };
+		C67EB6281FE92440007012F1 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		C67EB6291FE92440007012F1 /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		C6A25E571FE7A924002B9CFB /* LTMovableCellTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTMovableCellTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A25E5A1FE7A924002B9CFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6A25E5B1FE7A924002B9CFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 				C6A25E5B1FE7A924002B9CFB /* AppDelegate.m */,
 				C67EB61F1FE8BC32007012F1 /* HomeViewController.h */,
 				C67EB6201FE8BC32007012F1 /* HomeViewController.m */,
+				C67EB6281FE92440007012F1 /* CollectionViewCell.h */,
+				C67EB6291FE92440007012F1 /* CollectionViewCell.m */,
 				C67EB6251FE8BE84007012F1 /* UIView+Snapshot.h */,
 				C67EB6261FE8BE84007012F1 /* UIView+Snapshot.m */,
 				C67EB6231FE8BCC2007012F1 /* UIAlertView+RWBlock.h */,
@@ -366,6 +371,7 @@
 				C67EB61E1FE8B220007012F1 /* TableViewCell.m in Sources */,
 				C6A25E5C1FE7A924002B9CFB /* AppDelegate.m in Sources */,
 				C67EB6241FE8BCC3007012F1 /* UIAlertView+RWBlock.m in Sources */,
+				C67EB62A1FE92440007012F1 /* CollectionViewCell.m in Sources */,
 				C67EB6211FE8BC32007012F1 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
