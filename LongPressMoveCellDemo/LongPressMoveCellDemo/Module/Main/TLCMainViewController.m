@@ -9,7 +9,8 @@
 #import "TLCMainViewController.h"
 #import <Masonry/Masonry.h>
 #import "TLCMainCollectionViewCell.h"
-
+#import <MBProgressHUD/MBProgressHUD.h>
+ 
 #import "TLCDefine.h"
 #import "TLCGlobalCommon.h"
 #import "TLCMainViewFlowLayout.h"
@@ -21,13 +22,11 @@
 #import "UIColor+TLCAdd.h"
 
 #import "TLCProjectCell.h"
- 
-#import <MBProgressHUD/MBProgressHUD.h>
+#import "TLCDetailViewController.h"
 
 static const CGFloat TLCMainViewControllerHeaderLableHeight = 35;
 static const CGFloat TLCMainViewControllerTableViewMarginBottom = 27;
 static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
-
 
 @interface TLCMainViewController ()<UICollectionViewDelegate,
                                     UICollectionViewDataSource,
@@ -143,14 +142,14 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
     [self configurePageView];
     [self addPageSubviews];
     [self layoutPageSubviews];
-    [self fetchPlanListDataWithType:TLSDKPlanTypeAll];
+    [self addObserver];
+    [self fetchPlanListData];
 }
 
 - (void)dealloc {
     
     self.collectionView.delegate = nil;
     self.collectionView.dataSource = nil;
-    [self removeobserverForKeybord];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -160,100 +159,10 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
     [self handleSingleTabBarViewControllers];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    
-    [super viewDidAppear:animated];
-}
-
 - (void)viewWillDisappear:(BOOL)animated {
     
     [super viewWillDisappear:animated];
     [self.view endEditing:YES];
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    
-    [super viewDidDisappear:animated];
-}
-
-#pragma mark - keyboard observer
-
-- (void)addObserverForKeybord {
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWillShow:)
-                                                 name:UIKeyboardWillShowNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWillHide:)
-                                                 name:UIKeyboardWillHideNotification object:nil];
-    
-    [[NSNotificationCenter defaultCenter]addObserver:self
-                                            selector:@selector(keyBoardWillChageFrame:)
-                                                name:UIKeyboardWillChangeFrameNotification object:nil];
-}
-
-- (void)removeobserverForKeybord {
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIKeyboardWillShowNotification
-                                                  object:nil];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIKeyboardWillHideNotification
-                                                  object:nil];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIKeyboardWillChangeFrameNotification
-                                                  object:nil];
-}
-
-- (void)keyboardWillShow:(NSNotification *)notification {
-    
-}
-
-- (void)keyboardWillHide:(NSNotification *)notification {
-    
-    self.inputProjectView.frame = CGRectMake(0, TLCScreenHeight, TLCScreenWidth, 88);
-}
-
-- (void)keyBoardWillChageFrame:(NSNotification *)notification {
-    NSDictionary * infoDict = [notification userInfo];
-    
-    CGRect beginFrame = [[infoDict objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
-    CGRect endFrame = [[infoDict objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    
-    CGFloat offset_y = endFrame.origin.y - beginFrame.origin.y;
-    
-    
-    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-    CGFloat endHeight = TLCScreenHeight - [keyWindow TLCNavigationBarHeight];
-    
-    CGFloat projectInputViewBottom = 0;
-    if (offset_y<0) { //弹出键盘
-        if (endFrame.origin.y < endHeight) {
-            projectInputViewBottom = endHeight - endFrame.size.height;
-        } else {//避免一些 键盘在屏幕下方浮动的现象
-            projectInputViewBottom = endHeight;
-        }
-    }else{//键盘下移或消失
-        
-        if (endFrame.origin.y >= endHeight) {//键盘完全消失
-            projectInputViewBottom = endHeight;
-        } else {//键盘只是变矮了一点
-            projectInputViewBottom = endHeight - endFrame.size.height;
-        }
-    }
-    
-    CGFloat duration = [[infoDict objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
- 
-    //获取当前的inputview的高
-    CGFloat height = CGRectGetHeight(self.inputProjectView.frame);
-    
-    [UIView animateWithDuration:duration animations:^{
-        self.inputProjectView.frame = CGRectMake(0, projectInputViewBottom-height, TLCScreenWidth, height);
-    }];
 }
 
 #pragma mark - UI & autolayout
@@ -262,6 +171,7 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = TLCLocalizedString(@"TLC_Main_All_Everyday_Project");
+    
     if (@available(iOS 11.0, *)) {
         self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     } else {
@@ -270,14 +180,6 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
     self.navigationItem.rightBarButtonItems = @[self.menuItem,self.remindSettingItem];
-    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGestureRecognized:)];
-    self.longPress = longPress;
-    
-    [self.collectionView addGestureRecognizer:longPress];
-    [self addObserverForKeybord];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onReceiveNotify:) name:TLCNotificationUpdatePlan object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onReceiveNotify:) name:TLCNotificationDeletePlan object:nil];
 }
 
 - (void)addPageSubviews {
@@ -309,14 +211,80 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
         make.leading.equalTo(self.view);
         make.trailing.equalTo(self.view);
     }];
+}
+
+#pragma mark - keyboard observer
+
+- (void)addObserver {
     
-    [self.view setNeedsLayout];
-    [self.view layoutIfNeeded];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(keyBoardWillChageFrame:)
+                                                name:UIKeyboardWillChangeFrameNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onReceiveNotify:)
+                                                 name:TLCNotificationUpdatePlan object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onReceiveNotify:)
+                                                 name:TLCNotificationDeletePlan object:nil];
+}
+
+- (void)keyboardWillShow:(NSNotification *)notification {
+    
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    
+    self.inputProjectView.frame = CGRectMake(0, TLCScreenHeight, TLCScreenWidth, 88);
+}
+
+- (void)keyBoardWillChageFrame:(NSNotification *)notification {
+    NSDictionary * infoDict = [notification userInfo];
+    
+    CGRect beginFrame = [[infoDict objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    CGRect endFrame = [[infoDict objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    
+    CGFloat offset_y = endFrame.origin.y - beginFrame.origin.y;
+    
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    CGFloat endHeight = TLCScreenHeight - [keyWindow TLCNavigationBarHeight];
+    
+    CGFloat projectInputViewBottom = 0;
+    if (offset_y<0) { //弹出键盘
+        if (endFrame.origin.y < endHeight) {
+            projectInputViewBottom = endHeight - endFrame.size.height;
+        } else {//避免一些 键盘在屏幕下方浮动的现象
+            projectInputViewBottom = endHeight;
+        }
+    }else{//键盘下移或消失
+        if (endFrame.origin.y >= endHeight) {//键盘完全消失
+            projectInputViewBottom = endHeight;
+        } else {//键盘只是变矮了一点
+            projectInputViewBottom = endHeight - endFrame.size.height;
+        }
+    }
+    
+    CGFloat duration = [[infoDict objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    CGFloat height = CGRectGetHeight(self.inputProjectView.frame);
+    
+    [UIView animateWithDuration:duration animations:^{
+        self.inputProjectView.frame = CGRectMake(0, projectInputViewBottom-height, TLCScreenWidth, height);
+    }];
 }
 
 #pragma mark - network request
 
-- (void)fetchPlanListDataWithType:(TLSDKPlanType)type {
+- (void)fetchPlanListData {
     @weakify(self)
     [self.viewModel obtainTotalPlanListWithTypeCompletion:^(id resData, NSError *err) {
         @strongify(self)
@@ -324,7 +292,8 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
     }];
 }
 
-- (void)adjustPlanRanking { 
+- (void)adjustPlanRanking {
+    //TO DO发送网络请求，调整位置
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -349,6 +318,10 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
 
 - (void)collectionViewCell:(TLCMainCollectionViewCell *)collectionViewCell didSelectTableViewRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    TLPlanItem *model = [self.viewModel itemAtIndex:collectionViewCell.indexPath.row subItemIndex:indexPath.section];
+    TLCDetailViewController *detailViewController = [[TLCDetailViewController alloc] initWithModel:model];
+    
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 
@@ -367,7 +340,6 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
 }
 
 - (void)collectionViewCell:(TLCMainCollectionViewCell *)collectionViewCell pullToRefreshAtIndexPath:(NSIndexPath *)indexPath {
-    //0为获取全部数据，所以需要加1,数据由viewmodel处理，这里只处理UI
     [self.viewModel obtainTotalPlanListWithTypeCompletion:^(id resData, NSError *err) {
         [self.collectionView reloadData];
     }];
@@ -405,6 +377,10 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
 
 - (void)menuButtonClicked:(UIButton *)sender {
     
+    [self.viewModel exchangeItemsAtIndex:0 objectAtIndex:1 withObjectAtIndex:3];
+    [[self collectionViewCellAtRow:0] updateCellWithData:[self planItemsAtIndex:0]];
+    
+    [[self selectedCollectionViewCellTableView] moveSection:1 toSection:3];
 }
 
 - (void)remindSettingClicked:(UIButton *)sender {
@@ -492,7 +468,6 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
     
     NSIndexPath *lastSelectedIndexPath = self.selectedIndexPath;
     
-    //MARK: 在同一个tableview中，只能一步一步的移动
     if (!isTargetTableViewChanged) {
         if (targetIndexPath.section > (self.selectedIndexPath.section+1)) {
             targetIndexPath = [NSIndexPath indexPathForRow:0 inSection:(self.selectedIndexPath.section+1)];
@@ -501,6 +476,11 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
         }
         if (lastSelectedIndexPath.section == targetIndexPath.section) {
             [self modifySnapshotViewFrameWithTouchPoint:currentPoint];
+            return;
+        }
+        UITableViewCell *targetCell = [self tableView:[self selectedCollectionViewCellTableView] selectedCellAtSection:targetIndexPath.section];
+        if (!targetCell) {
+            [self modifySnapshotViewFrameWithTouchPoint:currentPoint]; 
             return;
         }
     } else {
@@ -541,7 +521,6 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
     [self.collectionView setContentOffset:contentOffset animated:YES];
     
     UITableViewCell *targetCell = [[self selectedCollectionViewCellTableView] cellForRowAtIndexPath:self.selectedIndexPath];
-    UITableViewHeaderFooterView *targetFooterView = [[self selectedCollectionViewCellTableView] footerViewForSection:self.selectedIndexPath.section];
     
     if ([self canAdjustPlanRanking]) {
         [self adjustPlanRanking];
@@ -553,7 +532,6 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
         
     } completion:^(BOOL finished) {
         targetCell.hidden = NO;
-        targetFooterView.hidden = NO;
         slectedItem.isHidden = NO;
         [self.snapshotView removeFromSuperview];
         self.snapshotView = nil;
@@ -958,7 +936,9 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.bounces = YES;
-        _collectionView.decelerationRate = 0; 
+        _collectionView.decelerationRate = 0;
+        
+        [_collectionView addGestureRecognizer:self.longPress];
     }
     return _collectionView;
 }
@@ -1015,6 +995,13 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
         _inputProjectView.delegate = self;
     }
     return _inputProjectView;
+}
+
+- (UILongPressGestureRecognizer *)longPress {
+    if (!_longPress) {
+        _longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGestureRecognized:)];
+    }
+    return _longPress;
 }
 
 @end

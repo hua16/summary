@@ -194,8 +194,8 @@ static NSString *const TLCMainCollectionViewCellSectionFooter = @"TLCMainCollect
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UITableViewHeaderFooterView *footerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:TLCMainCollectionViewCellSectionFooter];
-//    footerView.contentView.backgroundColor = [UIColor colorWithHexString:@"f5f5f5"];;
-    footerView.contentView.backgroundColor = [UIColor clearColor];
+   footerView.contentView.backgroundColor = [UIColor clearColor];
+    
     return footerView;
 }
 

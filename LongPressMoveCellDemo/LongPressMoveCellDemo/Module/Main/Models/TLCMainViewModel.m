@@ -67,8 +67,7 @@
     [items insertObject:item atIndex:0];
     if (completion) {
         completion(item,nil);
-    }
-    
+    } 
 }
 
 - (NSInteger)numberOfItems {

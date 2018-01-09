@@ -39,12 +39,12 @@ typedef NS_ENUM(NSUInteger, TLSDKPlanType) {
 };
 
 
+typedef void (^TLSDKCompletionBlk) (id resData, NSError *err);
+
 #ifndef MUPArrayObjectAtIndex
 #define MUPArrayObjectAtIndex(array, index)                                     \
 ((index) < [(array) count] && (index) >= 0 ?                           \
 [(array) objectAtIndex:(index)] : nil)
 #endif
-
-
 
 #endif

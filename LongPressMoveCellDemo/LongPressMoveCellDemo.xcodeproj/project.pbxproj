@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5A14D80AB5E96F30A9C0FF66 /* Pods_LongPressMoveCellDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6134EC88595FC798585A73 /* Pods_LongPressMoveCellDemo.framework */; };
+		CC664EC3200472FB00C55F42 /* TLCGlobalCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = CC664EC2200472FB00C55F42 /* TLCGlobalCommon.m */; };
+		CC664ECD2004730100C55F42 /* TLCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC664EC52004730100C55F42 /* TLCDetailViewController.m */; };
+		CC664ECE2004730100C55F42 /* TLCDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC664EC82004730100C55F42 /* TLCDetailViewModel.m */; };
+		CC664ECF2004730100C55F42 /* TLCPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC664ECC2004730100C55F42 /* TLCPlaceholderTextView.m */; };
 		CC8E03F020036600001E0365 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8E03EF20036600001E0365 /* AppDelegate.m */; };
 		CC8E03F320036601001E0365 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8E03F220036601001E0365 /* ViewController.m */; };
 		CC8E03F620036601001E0365 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8E03F420036601001E0365 /* Main.storyboard */; };
@@ -19,7 +23,6 @@
 		CC8E04532003718D001E0365 /* UIView+TLCSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8E04262003718C001E0365 /* UIView+TLCSnapshot.m */; };
 		CC8E04542003718D001E0365 /* UIWindow+TLCAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8E04272003718C001E0365 /* UIWindow+TLCAdd.m */; };
 		CC8E04552003718D001E0365 /* NSString+TLCSizeCalculate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8E042B2003718C001E0365 /* NSString+TLCSizeCalculate.m */; };
-		CC8E04562003718D001E0365 /* TLCGlobalCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8E042F2003718C001E0365 /* TLCGlobalCommon.m */; };
 		CC8E04572003718D001E0365 /* TLPlanCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8E04352003718C001E0365 /* TLPlanCategoryModel.m */; };
 		CC8E04582003718D001E0365 /* TLPlanItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8E04362003718C001E0365 /* TLPlanItem.m */; };
 		CC8E04592003718D001E0365 /* TLCMainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8E04392003718C001E0365 /* TLCMainViewModel.m */; };
@@ -61,6 +64,14 @@
 		20730B27E482A5F7A0A7C0B9 /* Pods-LongPressMoveCellDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LongPressMoveCellDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LongPressMoveCellDemo/Pods-LongPressMoveCellDemo.release.xcconfig"; sourceTree = "<group>"; };
 		8F6134EC88595FC798585A73 /* Pods_LongPressMoveCellDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LongPressMoveCellDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0EBB330878E7DDDAB2FD1A /* Pods-LongPressMoveCellDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LongPressMoveCellDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LongPressMoveCellDemo/Pods-LongPressMoveCellDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		CC664EC1200472FB00C55F42 /* TLCGlobalCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCGlobalCommon.h; sourceTree = "<group>"; };
+		CC664EC2200472FB00C55F42 /* TLCGlobalCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCGlobalCommon.m; sourceTree = "<group>"; };
+		CC664EC52004730100C55F42 /* TLCDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCDetailViewController.m; sourceTree = "<group>"; };
+		CC664EC72004730100C55F42 /* TLCDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCDetailViewModel.h; sourceTree = "<group>"; };
+		CC664EC82004730100C55F42 /* TLCDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCDetailViewModel.m; sourceTree = "<group>"; };
+		CC664EC92004730100C55F42 /* TLCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCDetailViewController.h; sourceTree = "<group>"; };
+		CC664ECB2004730100C55F42 /* TLCPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCPlaceholderTextView.h; sourceTree = "<group>"; };
+		CC664ECC2004730100C55F42 /* TLCPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCPlaceholderTextView.m; sourceTree = "<group>"; };
 		CC8E03EB20036600001E0365 /* LongPressMoveCellDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LongPressMoveCellDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8E03EE20036600001E0365 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC8E03EF20036600001E0365 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,8 +93,6 @@
 		CC8E04282003718C001E0365 /* UIView+TLCSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TLCSnapshot.h"; sourceTree = "<group>"; };
 		CC8E042A2003718C001E0365 /* NSString+TLCSizeCalculate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TLCSizeCalculate.h"; sourceTree = "<group>"; };
 		CC8E042B2003718C001E0365 /* NSString+TLCSizeCalculate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TLCSizeCalculate.m"; sourceTree = "<group>"; };
-		CC8E042E2003718C001E0365 /* TLCGlobalCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCGlobalCommon.h; sourceTree = "<group>"; };
-		CC8E042F2003718C001E0365 /* TLCGlobalCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCGlobalCommon.m; sourceTree = "<group>"; };
 		CC8E04312003718C001E0365 /* TLCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCMainViewController.h; sourceTree = "<group>"; };
 		CC8E04322003718C001E0365 /* TLCMainViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCMainViewFlowLayout.h; sourceTree = "<group>"; };
 		CC8E04342003718C001E0365 /* TLCNoResultViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCNoResultViewModel.h; sourceTree = "<group>"; };
@@ -167,6 +176,44 @@
 				8F6134EC88595FC798585A73 /* Pods_LongPressMoveCellDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC664EC0200472FB00C55F42 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				CC664EC1200472FB00C55F42 /* TLCGlobalCommon.h */,
+				CC664EC2200472FB00C55F42 /* TLCGlobalCommon.m */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		CC664EC42004730100C55F42 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CC664EC62004730100C55F42 /* Models */,
+				CC664EC92004730100C55F42 /* TLCDetailViewController.h */,
+				CC664EC52004730100C55F42 /* TLCDetailViewController.m */,
+				CC664ECA2004730100C55F42 /* Views */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		CC664EC62004730100C55F42 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CC664EC72004730100C55F42 /* TLCDetailViewModel.h */,
+				CC664EC82004730100C55F42 /* TLCDetailViewModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CC664ECA2004730100C55F42 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC664ECB2004730100C55F42 /* TLCPlaceholderTextView.h */,
+				CC664ECC2004730100C55F42 /* TLCPlaceholderTextView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CC8E03E220036600001E0365 = {
@@ -267,19 +314,11 @@
 		CC8E042C2003718C001E0365 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				CC8E042D2003718C001E0365 /* Common */,
+				CC664EC42004730100C55F42 /* Detail */,
+				CC664EC0200472FB00C55F42 /* Const */,
 				CC8E04302003718C001E0365 /* Main */,
 			);
 			path = Module;
-			sourceTree = "<group>";
-		};
-		CC8E042D2003718C001E0365 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				CC8E042E2003718C001E0365 /* TLCGlobalCommon.h */,
-				CC8E042F2003718C001E0365 /* TLCGlobalCommon.m */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		CC8E04302003718C001E0365 /* Main */ = {
@@ -546,6 +585,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC8E047D2003844C001E0365 /* MUITextViewInternal.m in Sources */,
+				CC664EC3200472FB00C55F42 /* TLCGlobalCommon.m in Sources */,
 				CC8E045A2003718D001E0365 /* TLCNoResultViewModel.m in Sources */,
 				CC8E03F320036601001E0365 /* ViewController.m in Sources */,
 				CC8E045E2003718D001E0365 /* TLCMainViewController.m in Sources */,
@@ -553,7 +593,7 @@
 				CC8E04612003718D001E0365 /* TLCMainNoResultView.m in Sources */,
 				CC8E045F2003718D001E0365 /* TLCMainCollectionViewCell.m in Sources */,
 				CC8E04542003718D001E0365 /* UIWindow+TLCAdd.m in Sources */,
-				CC8E04562003718D001E0365 /* TLCGlobalCommon.m in Sources */,
+				CC664ECF2004730100C55F42 /* TLCPlaceholderTextView.m in Sources */,
 				CC8E04532003718D001E0365 /* UIView+TLCSnapshot.m in Sources */,
 				CC8E045D2003718D001E0365 /* TLCMainViewFlowLayout.m in Sources */,
 				CC8E04582003718D001E0365 /* TLPlanItem.m in Sources */,
@@ -562,9 +602,11 @@
 				CC8E04602003718D001E0365 /* TLCProjectCell.m in Sources */,
 				CC8E047C2003844C001E0365 /* MUIGrowingTextView.m in Sources */,
 				CC8E04552003718D001E0365 /* NSString+TLCSizeCalculate.m in Sources */,
+				CC664ECE2004730100C55F42 /* TLCDetailViewModel.m in Sources */,
 				CC8E045C2003718D001E0365 /* TLPlanItemReq.m in Sources */,
 				CC8E0480200384DD001E0365 /* UIImage+TLCAdd.m in Sources */,
 				CC8E04592003718D001E0365 /* TLCMainViewModel.m in Sources */,
+				CC664ECD2004730100C55F42 /* TLCDetailViewController.m in Sources */,
 				CC8E048320038D96001E0365 /* main.m in Sources */,
 				CC8E04762003817A001E0365 /* UIColor+TLCAdd.m in Sources */,
 			);

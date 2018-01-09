@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TLCDefine.h"
-#import <Masonry/Masonry.h>
-
 @interface TLCMainViewController : UIViewController
 
 @end

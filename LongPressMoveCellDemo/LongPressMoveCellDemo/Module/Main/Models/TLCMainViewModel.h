@@ -11,7 +11,6 @@
 #import "TLPlanItemReq.h"
 #import "TLPlanItem.h"
 
-typedef void (^TLSDKCompletionBlk) (id resData, NSError *err);
 
 @class TLCBaseViewController;
 @class TLPlanCategoryModel;
