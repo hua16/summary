@@ -10,11 +10,15 @@
 
 @implementation TLCNoResultViewModel
 
+- (void)extracted:(NSString *)imageName tip:(NSString *)tip title:(NSString *)title {
+    self.imageName = imageName;
+    self.title = title;
+    self.tip = tip;
+}
+
 - (instancetype)initWithImageName:(NSString *)imageName title:(NSString *)title tip:(NSString *)tip {
     if (self = [super init]) {
-        self.imageName = imageName;
-        self.title = title;
-        self.tip = tip;
+        [self extracted:imageName tip:tip title:title];
     }
     return self;
 } 
