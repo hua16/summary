@@ -1,0 +1,26 @@
+PODS:
+  - Mantle (2.1.0):
+    - Mantle/extobjc (= 2.1.0)
+  - Mantle/extobjc (2.1.0)
+  - Masonry (1.1.0)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
+
+DEPENDENCIES:
+  - Mantle (~> 2.0)
+  - Masonry
+  - SDWebImage (from `/Users/huage/Documents/iOS/Learning/OCLearning/SDWebImage`)
+
+EXTERNAL SOURCES:
+  SDWebImage:
+    :path: /Users/huage/Documents/iOS/Learning/OCLearning/SDWebImage
+
+SPEC CHECKSUMS:
+  Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SDWebImage: b5d720d08c7b24fc8476b8cf4021de317a627395
+
+PODFILE CHECKSUM: ddb9a999a5dfc4ac46b4c1ac86216d87cdb45d43
+
+COCOAPODS: 1.3.1

@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C65451021FC30740001CECB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65451011FC30740001CECB2 /* AppDelegate.swift */; };
+		C65451041FC30740001CECB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65451031FC30740001CECB2 /* ViewController.swift */; };
+		C65451071FC30740001CECB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C65451051FC30740001CECB2 /* Main.storyboard */; };
+		C65451091FC30740001CECB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C65451081FC30740001CECB2 /* Assets.xcassets */; };
+		C654510C1FC30740001CECB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C654510A1FC30740001CECB2 /* LaunchScreen.storyboard */; };
+		C65451171FC30740001CECB2 /* stanford_gameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65451161FC30740001CECB2 /* stanford_gameTests.swift */; };
+		C65451221FC30740001CECB2 /* stanford_gameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65451211FC30740001CECB2 /* stanford_gameUITests.swift */; };
+		C65451321FC31D8F001CECB2 /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65451311FC31D8F001CECB2 /* Concentration.swift */; };
+		C65451341FC31E50001CECB2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65451331FC31E50001CECB2 /* Card.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C65451131FC30740001CECB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C65450F61FC30740001CECB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C65450FD1FC30740001CECB2;
+			remoteInfo = "stanford-game";
+		};
+		C654511E1FC30740001CECB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C65450F61FC30740001CECB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C65450FD1FC30740001CECB2;
+			remoteInfo = "stanford-game";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C65450FE1FC30740001CECB2 /* stanford-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stanford-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C65451011FC30740001CECB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C65451031FC30740001CECB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C65451061FC30740001CECB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C65451081FC30740001CECB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C654510B1FC30740001CECB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C654510D1FC30740001CECB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C65451121FC30740001CECB2 /* stanford-gameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "stanford-gameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C65451161FC30740001CECB2 /* stanford_gameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stanford_gameTests.swift; sourceTree = "<group>"; };
+		C65451181FC30740001CECB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C654511D1FC30740001CECB2 /* stanford-gameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "stanford-gameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C65451211FC30740001CECB2 /* stanford_gameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stanford_gameUITests.swift; sourceTree = "<group>"; };
+		C65451231FC30740001CECB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C65451311FC31D8F001CECB2 /* Concentration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
+		C65451331FC31E50001CECB2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C65450FB1FC30740001CECB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C654510F1FC30740001CECB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C654511A1FC30740001CECB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C65450F51FC30740001CECB2 = {
+			isa = PBXGroup;
+			children = (
+				C65451001FC30740001CECB2 /* stanford-game */,
+				C65451151FC30740001CECB2 /* stanford-gameTests */,
+				C65451201FC30740001CECB2 /* stanford-gameUITests */,
+				C65450FF1FC30740001CECB2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C65450FF1FC30740001CECB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C65450FE1FC30740001CECB2 /* stanford-game.app */,
+				C65451121FC30740001CECB2 /* stanford-gameTests.xctest */,
+				C654511D1FC30740001CECB2 /* stanford-gameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C65451001FC30740001CECB2 /* stanford-game */ = {
+			isa = PBXGroup;
+			children = (
+				C65451311FC31D8F001CECB2 /* Concentration.swift */,
+				C65451331FC31E50001CECB2 /* Card.swift */,
+				C65451011FC30740001CECB2 /* AppDelegate.swift */,
+				C65451031FC30740001CECB2 /* ViewController.swift */,
+				C65451051FC30740001CECB2 /* Main.storyboard */,
+				C65451081FC30740001CECB2 /* Assets.xcassets */,
+				C654510A1FC30740001CECB2 /* LaunchScreen.storyboard */,
+				C654510D1FC30740001CECB2 /* Info.plist */,
+			);
+			path = "stanford-game";
+			sourceTree = "<group>";
+		};
+		C65451151FC30740001CECB2 /* stanford-gameTests */ = {
+			isa = PBXGroup;
+			children = (
+				C65451161FC30740001CECB2 /* stanford_gameTests.swift */,
+				C65451181FC30740001CECB2 /* Info.plist */,
+			);
+			path = "stanford-gameTests";
+			sourceTree = "<group>";
+		};
+		C65451201FC30740001CECB2 /* stanford-gameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C65451211FC30740001CECB2 /* stanford_gameUITests.swift */,
+				C65451231FC30740001CECB2 /* Info.plist */,
+			);
+			path = "stanford-gameUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C65450FD1FC30740001CECB2 /* stanford-game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C65451261FC30740001CECB2 /* Build configuration list for PBXNativeTarget "stanford-game" */;
+			buildPhases = (
+				C65450FA1FC30740001CECB2 /* Sources */,
+				C65450FB1FC30740001CECB2 /* Frameworks */,
+				C65450FC1FC30740001CECB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "stanford-game";
+			productName = "stanford-game";
+			productReference = C65450FE1FC30740001CECB2 /* stanford-game.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C65451111FC30740001CECB2 /* stanford-gameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C65451291FC30740001CECB2 /* Build configuration list for PBXNativeTarget "stanford-gameTests" */;
+			buildPhases = (
+				C654510E1FC30740001CECB2 /* Sources */,
+				C654510F1FC30740001CECB2 /* Frameworks */,
+				C65451101FC30740001CECB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C65451141FC30740001CECB2 /* PBXTargetDependency */,
+			);
+			name = "stanford-gameTests";
+			productName = "stanford-gameTests";
+			productReference = C65451121FC30740001CECB2 /* stanford-gameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C654511C1FC30740001CECB2 /* stanford-gameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C654512C1FC30740001CECB2 /* Build configuration list for PBXNativeTarget "stanford-gameUITests" */;
+			buildPhases = (
+				C65451191FC30740001CECB2 /* Sources */,
+				C654511A1FC30740001CECB2 /* Frameworks */,
+				C654511B1FC30740001CECB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C654511F1FC30740001CECB2 /* PBXTargetDependency */,
+			);
+			name = "stanford-gameUITests";
+			productName = "stanford-gameUITests";
+			productReference = C654511D1FC30740001CECB2 /* stanford-gameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C65450F61FC30740001CECB2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = huage;
+				TargetAttributes = {
+					C65450FD1FC30740001CECB2 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					C65451111FC30740001CECB2 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C65450FD1FC30740001CECB2;
+					};
+					C654511C1FC30740001CECB2 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C65450FD1FC30740001CECB2;
+					};
+				};
+			};
+			buildConfigurationList = C65450F91FC30740001CECB2 /* Build configuration list for PBXProject "stanford-game" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C65450F51FC30740001CECB2;
+			productRefGroup = C65450FF1FC30740001CECB2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C65450FD1FC30740001CECB2 /* stanford-game */,
+				C65451111FC30740001CECB2 /* stanford-gameTests */,
+				C654511C1FC30740001CECB2 /* stanford-gameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C65450FC1FC30740001CECB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C654510C1FC30740001CECB2 /* LaunchScreen.storyboard in Resources */,
+				C65451091FC30740001CECB2 /* Assets.xcassets in Resources */,
+				C65451071FC30740001CECB2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C65451101FC30740001CECB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C654511B1FC30740001CECB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C65450FA1FC30740001CECB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65451041FC30740001CECB2 /* ViewController.swift in Sources */,
+				C65451021FC30740001CECB2 /* AppDelegate.swift in Sources */,
+				C65451321FC31D8F001CECB2 /* Concentration.swift in Sources */,
+				C65451341FC31E50001CECB2 /* Card.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C654510E1FC30740001CECB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65451171FC30740001CECB2 /* stanford_gameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C65451191FC30740001CECB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65451221FC30740001CECB2 /* stanford_gameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C65451141FC30740001CECB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C65450FD1FC30740001CECB2 /* stanford-game */;
+			targetProxy = C65451131FC30740001CECB2 /* PBXContainerItemProxy */;
+		};
+		C654511F1FC30740001CECB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C65450FD1FC30740001CECB2 /* stanford-game */;
+			targetProxy = C654511E1FC30740001CECB2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C65451051FC30740001CECB2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C65451061FC30740001CECB2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C654510A1FC30740001CECB2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C654510B1FC30740001CECB2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C65451241FC30740001CECB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C65451251FC30740001CECB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C65451271FC30740001CECB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = "stanford-game/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.huage.company.stanford-game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C65451281FC30740001CECB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = "stanford-game/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.huage.company.stanford-game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C654512A1FC30740001CECB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = "stanford-gameTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.huage.company.stanford-gameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stanford-game.app/stanford-game";
+			};
+			name = Debug;
+		};
+		C654512B1FC30740001CECB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = "stanford-gameTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.huage.company.stanford-gameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stanford-game.app/stanford-game";
+			};
+			name = Release;
+		};
+		C654512D1FC30740001CECB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = "stanford-gameUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.huage.company.stanford-gameUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "stanford-game";
+			};
+			name = Debug;
+		};
+		C654512E1FC30740001CECB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = "stanford-gameUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.huage.company.stanford-gameUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "stanford-game";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C65450F91FC30740001CECB2 /* Build configuration list for PBXProject "stanford-game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C65451241FC30740001CECB2 /* Debug */,
+				C65451251FC30740001CECB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C65451261FC30740001CECB2 /* Build configuration list for PBXNativeTarget "stanford-game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C65451271FC30740001CECB2 /* Debug */,
+				C65451281FC30740001CECB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C65451291FC30740001CECB2 /* Build configuration list for PBXNativeTarget "stanford-gameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C654512A1FC30740001CECB2 /* Debug */,
+				C654512B1FC30740001CECB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C654512C1FC30740001CECB2 /* Build configuration list for PBXNativeTarget "stanford-gameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C654512D1FC30740001CECB2 /* Debug */,
+				C654512E1FC30740001CECB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C65450F61FC30740001CECB2 /* Project object */;
+}
