@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LongPressMoveCellDemo/Module/Main/TLCMainViewController.m"
-            timestampString = "537190014.7471451"
+            timestampString = "537258851.7347"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "267"
-            endingLineNumber = "267"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
             landmarkName = "-keyBoardWillChageFrame:"
             landmarkType = "7">
          </BreakpointContent>

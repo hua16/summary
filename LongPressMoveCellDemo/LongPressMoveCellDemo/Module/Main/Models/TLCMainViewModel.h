@@ -121,19 +121,7 @@
  @return 数据模型
  */
 - (TLPlanItem *)itemAtIndex:(NSInteger)itemIndex
-               subItemIndex:(NSInteger)subItemIndex;
-
-
-/**
- 交换数据
-
- @param itemIndex 一级index
- @param idx1 被交换数据所在index
- @param idx2 交换数据所在index
- */
-- (void)exchangeItemsAtIndex:(NSInteger)itemIndex
-               objectAtIndex:(NSUInteger)idx1
-           withObjectAtIndex:(NSUInteger)idx2;
+               subItemIndex:(NSInteger)subItemIndex; 
 
 /**
  重置数据
@@ -144,4 +132,5 @@
  保存长按开始时的数据
  */
 - (void)storePressBeginState;
+
 @end

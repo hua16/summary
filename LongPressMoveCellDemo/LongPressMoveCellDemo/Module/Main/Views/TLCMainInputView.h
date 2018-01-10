@@ -37,4 +37,10 @@
  */
 - (NSString *)inputText;
 
+/**
+ 重置，将文本置为nil
+ */
+- (void)resetText;
+
+
 @end

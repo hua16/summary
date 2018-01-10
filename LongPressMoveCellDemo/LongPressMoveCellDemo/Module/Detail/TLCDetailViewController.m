@@ -99,6 +99,7 @@ typedef NS_ENUM(NSUInteger, TLCDetailViewActionType) {
         _model.idStr = model.idStr;
         _model.important = model.important;
         _model.title = model.title;
+        _model.finish = model.finish;
         _originalImportState = model.important;
         _actionType = TLCDetailViewActionTypeDelete;
     }

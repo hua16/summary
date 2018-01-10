@@ -145,15 +145,7 @@
     
     NSMutableArray<TLPlanItem *> *items =  [self planItemsAtIndex:itemIndex];
     return MUPArrayObjectAtIndex(items, subItemIndex);
-}
-
-- (void)exchangeItemsAtIndex:(NSInteger)itemIndex
-               objectAtIndex:(NSUInteger)idx1
-           withObjectAtIndex:(NSUInteger)idx2 {
-    
-    NSMutableArray<TLPlanItem *> *items =  [self planItemsAtIndex:itemIndex];
-    [items exchangeObjectAtIndex:idx1 withObjectAtIndex:idx2];
-}
+} 
 
 - (void)adjustItemSort:(TLPlanItem *)item atArray:(NSMutableArray<TLPlanItem *> *)items {
     
