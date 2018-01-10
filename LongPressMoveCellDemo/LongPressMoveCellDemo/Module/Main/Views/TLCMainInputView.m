@@ -84,15 +84,15 @@
 
 - (void)cancelButtonClicked:(UIButton *)sender {
     [self.textView resignFirstResponder];
-    self.textView.text = nil;
+    [self resetText];
 }
 
 - (void)createButtonClicked:(UIButton *)sender {
-    [self.textView resignFirstResponder];
     if (self.delegate && [self.delegate respondsToSelector:@selector(mainInputView:creatProjectAtIndexPath:)]) {
         [self.delegate mainInputView:self creatProjectAtIndexPath:self.indexPath];
     }
-    self.textView.text = nil;
+    [self.textView resignFirstResponder];
+    [self resetText];
 }
 
 #pragma mark - public
@@ -103,6 +103,10 @@
 
 - (NSString *)inputText {
     return self.textView.text;
+}
+
+- (void)resetText {
+    self.textView.text = nil;
 }
 
 #pragma mark - MUIGrowingTextViewDelegate

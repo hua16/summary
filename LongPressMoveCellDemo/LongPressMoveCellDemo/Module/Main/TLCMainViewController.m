@@ -245,6 +245,7 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
 
 - (void)keyboardWillHide:(NSNotification *)notification {
     
+    [self.inputProjectView resetText];
     self.inputProjectView.frame = CGRectMake(0, TLCScreenHeight, TLCScreenWidth, 88);
 }
 
@@ -377,10 +378,6 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
 
 - (void)menuButtonClicked:(UIButton *)sender {
     
-    [self.viewModel exchangeItemsAtIndex:0 objectAtIndex:1 withObjectAtIndex:3];
-    [[self collectionViewCellAtRow:0] updateCellWithData:[self planItemsAtIndex:0]];
-    
-    [[self selectedCollectionViewCellTableView] moveSection:1 toSection:3];
 }
 
 - (void)remindSettingClicked:(UIButton *)sender {
@@ -422,7 +419,7 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
     
     NSIndexPath *touchIndexPath = [self longGestureBeganIndexPathForRowAtPoint:location atTableView:selectedCollectionViewCell.tableView];
    
-    if (!selectedCollectionViewCell.tableView || !touchIndexPath) {
+    if (!selectedCollectionViewCell || !touchIndexPath) {
         return ;
     }
     self.selectedCollectionViewCellRow = [self.collectionView indexPathForCell:selectedCollectionViewCell].row;
@@ -469,16 +466,12 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
     NSIndexPath *lastSelectedIndexPath = self.selectedIndexPath;
     
     if (!isTargetTableViewChanged) {
-        if (targetIndexPath.section > (self.selectedIndexPath.section+1)) {
-            targetIndexPath = [NSIndexPath indexPathForRow:0 inSection:(self.selectedIndexPath.section+1)];
-        } else if (targetIndexPath.section < (self.selectedIndexPath.section-1)) {
-            targetIndexPath = [NSIndexPath indexPathForRow:0 inSection:(self.selectedIndexPath.section-1)];
-        }
         if (lastSelectedIndexPath.section == targetIndexPath.section) {
             [self modifySnapshotViewFrameWithTouchPoint:currentPoint];
             return;
         }
-        UITableViewCell *targetCell = [self tableView:[self selectedCollectionViewCellTableView] selectedCellAtSection:targetIndexPath.section];
+        UITableViewCell *targetCell = [self tableView:[self selectedCollectionViewCellTableView]
+                                selectedCellAtSection:targetIndexPath.section];
         if (!targetCell) {
             [self modifySnapshotViewFrameWithTouchPoint:currentPoint]; 
             return;
@@ -492,18 +485,31 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
     
     TLCMainCollectionViewCell *selectedCollectionViewCell = [self collectionViewCellAtRow:self.selectedCollectionViewCellRow];
     if (isTargetTableViewChanged) {
-        TLPlanItem *moveItem = [self.viewModel itemAtIndex:lasetSelectedCollectionViewCell.indexPath.row subItemIndex:lastSelectedIndexPath.section];
+        TLPlanItem *moveItem = [self.viewModel itemAtIndex:lasetSelectedCollectionViewCell.indexPath.row
+                                              subItemIndex:lastSelectedIndexPath.section];
 
-        [self.viewModel removeObject:moveItem itemIndex:lasetSelectedCollectionViewCell.indexPath.row];
-        [self.viewModel insertObjectAtIndex:self.selectedCollectionViewCellRow subItemIndex:targetIndexPath.section item:moveItem];
+        [self.viewModel removeObject:moveItem
+                           itemIndex:lasetSelectedCollectionViewCell.indexPath.row];
+        [self.viewModel insertObjectAtIndex:self.selectedCollectionViewCellRow
+                               subItemIndex:targetIndexPath.section item:moveItem];
 
         [lasetSelectedCollectionViewCell updateCellWithData:[self planItemsAtIndex:lasetSelectedCollectionViewCell.indexPath.row]];
-        [lasetSelectedCollectionViewCell.tableView deleteSections:[NSIndexSet indexSetWithIndex:lastSelectedIndexPath.section] withRowAnimation:UITableViewRowAnimationNone];
+        [lasetSelectedCollectionViewCell.tableView deleteSections:[NSIndexSet indexSetWithIndex:lastSelectedIndexPath.section]
+                                                 withRowAnimation:UITableViewRowAnimationNone];
 
         [selectedCollectionViewCell updateCellWithData:[self planItemsAtIndex:self.selectedCollectionViewCellRow]];
-        [selectedCollectionViewCell.tableView insertSections:[NSIndexSet indexSetWithIndex:targetIndexPath.section] withRowAnimation:UITableViewRowAnimationNone];
-    } else { 
-        [self.viewModel exchangeItemsAtIndex:self.selectedCollectionViewCellRow objectAtIndex:targetIndexPath.section withObjectAtIndex:lastSelectedIndexPath.section];
+        [selectedCollectionViewCell.tableView insertSections:[NSIndexSet indexSetWithIndex:targetIndexPath.section]
+                                            withRowAnimation:UITableViewRowAnimationNone];
+    } else {
+        
+        TLPlanItem *item = [self.viewModel itemAtIndex:self.selectedCollectionViewCellRow
+                                          subItemIndex:lastSelectedIndexPath.section];
+        [self.viewModel removeObject:item
+                           itemIndex:self.selectedCollectionViewCellRow];
+        [self.viewModel insertObjectAtIndex:self.selectedCollectionViewCellRow
+                               subItemIndex:targetIndexPath.section
+                                       item:item];
+        
         [selectedCollectionViewCell updateCellWithData:[self planItemsAtIndex:self.selectedCollectionViewCellRow]];
         [selectedCollectionViewCell.tableView moveSection:lastSelectedIndexPath.section toSection:targetIndexPath.section]; 
     }
@@ -728,7 +734,8 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
     TLCMainCollectionViewCell *currentCollectionViewCell = nil;
     for (TLCMainCollectionViewCell *collectionViewCell in self.collectionView.visibleCells) {
         
-        CGRect frame = [collectionViewCell convertRect:collectionViewCell.tableView.frame toView:self.collectionView];
+        CGRect frame = [collectionViewCell convertRect:collectionViewCell.tableView.frame
+                                                toView:self.collectionView];
         if (location.x> CGRectGetMinX(frame) && location.x < CGRectGetMaxX(frame)) {
             currentCollectionViewCell = collectionViewCell;
             break;
@@ -756,7 +763,8 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
 
 - (CGRect)snapshotViewFrameWithCell:(UITableViewCell *)cell {
     
-    return [[self selectedCollectionViewCellTableView] convertRect:cell.frame toView:self.collectionView];
+    return [[self selectedCollectionViewCellTableView] convertRect:cell.frame
+                                                            toView:self.collectionView];
 }
 
 - (void)handleSingleTabBarViewControllers {
@@ -773,7 +781,8 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
 
 - (CGFloat)touchSnapshotViewCenterOffsetX {
     
-    CGPoint touchSnapshotViewCenter = [self.collectionView convertPoint:self.snapshotView.center toView:self.view];
+    CGPoint touchSnapshotViewCenter = [self.collectionView convertPoint:self.snapshotView.center
+                                                                 toView:self.view];
     CGPoint viewCenter = self.view.center;
     return touchSnapshotViewCenter.x - viewCenter.x;
 }
@@ -803,7 +812,8 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
 //获取长按开始时cell在tableview上的位置
 - (NSIndexPath *)longGestureBeganIndexPathForRowAtPoint:(CGPoint)touchPoint atTableView:(UITableView *)tableView {
     
-    CGPoint point = [self.collectionView convertPoint:touchPoint toView:tableView];
+    CGPoint point = [self.collectionView convertPoint:touchPoint
+                                               toView:tableView];
     NSIndexPath *indexPath = [tableView indexPathForRowAtPoint:point];
     return indexPath;
 }
@@ -812,7 +822,8 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
 - (NSIndexPath *)longGestureChangeIndexPathForRowAtPoint:(CGPoint)touchPoint
                                       collectionViewCell:(TLCMainCollectionViewCell *)collectionViewCell {
     
-    CGPoint point = [self.collectionView convertPoint:touchPoint toView:collectionViewCell.tableView];
+    CGPoint point = [self.collectionView convertPoint:touchPoint
+                                               toView:collectionViewCell.tableView];
     __block NSIndexPath *indexPath = [collectionViewCell.tableView indexPathForRowAtPoint:point];
     
     if (!indexPath) {
