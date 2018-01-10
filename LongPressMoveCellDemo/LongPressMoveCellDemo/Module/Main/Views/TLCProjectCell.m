@@ -144,11 +144,26 @@ static const CGFloat TLCProjectCellKeyPointLableMarginBottom = 8;
     NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:self.model.title];
     NSInteger length = self.model.title.length;
     if (self.model.finish) {
-        [attributeString addAttribute:NSStrikethroughStyleAttributeName value:@(NSUnderlinePatternSolid | NSUnderlineStyleSingle) range:NSMakeRange(0, length)];
-        [attributeString addAttribute:NSStrikethroughColorAttributeName value:[UIColor colorWithHexString:@"999999"] range:NSMakeRange(0, length)];
-        [attributeString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"999999"] range:NSMakeRange(0, length)];
+        [attributeString addAttribute:NSStrikethroughStyleAttributeName
+                                value:@(NSUnderlinePatternSolid | NSUnderlineStyleSingle)
+                                range:NSMakeRange(0, length)];
+        
+        // FIX iOS 10.3: NSStrikethroughStyleAttributeName is not rendered
+        [attributeString addAttribute:NSBaselineOffsetAttributeName
+                                value:@0
+                                range:NSMakeRange(0, length)];
+
+        [attributeString addAttribute:NSStrikethroughColorAttributeName
+                                value:[UIColor colorWithHexString:@"999999"]
+                                range:NSMakeRange(0, length)];
+        
+        [attributeString addAttribute:NSForegroundColorAttributeName
+                                value:[UIColor colorWithHexString:@"999999"]
+                                range:NSMakeRange(0, length)];
     } else {
-        [attributeString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"333333"] range:NSMakeRange(0, length)];
+        [attributeString addAttribute:NSForegroundColorAttributeName
+                                value:[UIColor colorWithHexString:@"333333"]
+                                range:NSMakeRange(0, length)];
     }
     
     [attributeString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, length)];

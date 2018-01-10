@@ -132,9 +132,10 @@
     [items removeObject:item]; 
 }
 
-- (void)insertObjectAtIndex:(NSInteger)itemIndex
-               subItemIndex:(NSInteger)subItemIndex
-                       item:(TLPlanItem *)item {
+
+- (void)insertItem:(TLPlanItem *)item
+             index:(NSInteger)itemIndex
+      subItemIndex:(NSInteger)subItemIndex { 
     
     NSMutableArray<TLPlanItem *> *items =  [self planItemsAtIndex:itemIndex];
     [items insertObject:item atIndex:subItemIndex];

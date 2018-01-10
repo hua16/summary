@@ -465,33 +465,20 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
     
     NSIndexPath *lastSelectedIndexPath = self.selectedIndexPath;
     
-    if (!isTargetTableViewChanged) {
-        if (lastSelectedIndexPath.section == targetIndexPath.section) {
-            [self modifySnapshotViewFrameWithTouchPoint:currentPoint];
-            return;
-        }
-        UITableViewCell *targetCell = [self tableView:[self selectedCollectionViewCellTableView]
-                                selectedCellAtSection:targetIndexPath.section];
-        if (!targetCell) {
-            [self modifySnapshotViewFrameWithTouchPoint:currentPoint]; 
-            return;
-        }
-    } else {
-        if ([[self selectedCollectionViewCellTableView] numberOfSections]>targetIndexPath.section) {
-           [[self selectedCollectionViewCellTableView] scrollToRowAtIndexPath:targetIndexPath
-                                                             atScrollPosition:UITableViewScrollPositionNone animated:YES];
-        }
-    }
-    
     TLCMainCollectionViewCell *selectedCollectionViewCell = [self collectionViewCellAtRow:self.selectedCollectionViewCellRow];
     if (isTargetTableViewChanged) {
+        if ([[self selectedCollectionViewCellTableView] numberOfSections]>targetIndexPath.section) {
+            [[self selectedCollectionViewCellTableView] scrollToRowAtIndexPath:targetIndexPath
+                                                              atScrollPosition:UITableViewScrollPositionNone animated:YES];
+        }
+        
         TLPlanItem *moveItem = [self.viewModel itemAtIndex:lasetSelectedCollectionViewCell.indexPath.row
                                               subItemIndex:lastSelectedIndexPath.section];
-
         [self.viewModel removeObject:moveItem
                            itemIndex:lasetSelectedCollectionViewCell.indexPath.row];
-        [self.viewModel insertObjectAtIndex:self.selectedCollectionViewCellRow
-                               subItemIndex:targetIndexPath.section item:moveItem];
+        [self.viewModel insertItem:moveItem
+                             index:self.selectedCollectionViewCellRow
+                      subItemIndex:targetIndexPath.section];
 
         [lasetSelectedCollectionViewCell updateCellWithData:[self planItemsAtIndex:lasetSelectedCollectionViewCell.indexPath.row]];
         [lasetSelectedCollectionViewCell.tableView deleteSections:[NSIndexSet indexSetWithIndex:lastSelectedIndexPath.section]
@@ -501,17 +488,26 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
         [selectedCollectionViewCell.tableView insertSections:[NSIndexSet indexSetWithIndex:targetIndexPath.section]
                                             withRowAnimation:UITableViewRowAnimationNone];
     } else {
+        BOOL isSameSection = lastSelectedIndexPath.section == targetIndexPath.section;
+        UITableViewCell *targetCell = [self tableView:[self selectedCollectionViewCellTableView]
+                                selectedCellAtSection:targetIndexPath.section];
+        if (isSameSection || !targetCell ) {
+            [self modifySnapshotViewFrameWithTouchPoint:currentPoint];
+            return;
+        }
         
         TLPlanItem *item = [self.viewModel itemAtIndex:self.selectedCollectionViewCellRow
                                           subItemIndex:lastSelectedIndexPath.section];
         [self.viewModel removeObject:item
                            itemIndex:self.selectedCollectionViewCellRow];
-        [self.viewModel insertObjectAtIndex:self.selectedCollectionViewCellRow
-                               subItemIndex:targetIndexPath.section
-                                       item:item];
+        [self.viewModel insertItem:item
+                             index:self.selectedCollectionViewCellRow
+                      subItemIndex:targetIndexPath.section
+                                       ];
         
         [selectedCollectionViewCell updateCellWithData:[self planItemsAtIndex:self.selectedCollectionViewCellRow]];
-        [selectedCollectionViewCell.tableView moveSection:lastSelectedIndexPath.section toSection:targetIndexPath.section]; 
+        [selectedCollectionViewCell.tableView moveSection:lastSelectedIndexPath.section
+                                                toSection:targetIndexPath.section];
     }
     
     self.selectedIndexPath = targetIndexPath;
@@ -523,7 +519,8 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
     
     [self stopEdgeScrollTimer];
     
-    CGPoint contentOffset = [self.flowLayout targetContentOffsetForProposedContentOffset:self.collectionView.contentOffset withScrollingVelocity:CGPointZero];
+    CGPoint contentOffset = [self.flowLayout targetContentOffsetForProposedContentOffset:self.collectionView.contentOffset
+                                                                   withScrollingVelocity:CGPointZero];
     [self.collectionView setContentOffset:contentOffset animated:YES];
     
     UITableViewCell *targetCell = [[self selectedCollectionViewCellTableView] cellForRowAtIndexPath:self.selectedIndexPath];
@@ -554,7 +551,8 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
     itemReq.type = (TLSDKPlanType)(indexPath.row+1);
     
     @weakify(self)
-    [self.viewModel addPlanWithReq:itemReq atIndexPath:indexPath completion:^(id resData, NSError *err) {
+    [self.viewModel addPlanWithReq:itemReq atIndexPath:indexPath
+                        completion:^(id resData, NSError *err) {
         @strongify(self)
         [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
     }];

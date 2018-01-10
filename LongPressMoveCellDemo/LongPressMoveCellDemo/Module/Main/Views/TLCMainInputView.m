@@ -200,8 +200,7 @@
         _createButton.layer.cornerRadius = 4.0;
         _createButton.layer.masksToBounds = YES;
         
-        [_createButton addTarget:self action:@selector(createButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        
+        [_createButton addTarget:self action:@selector(createButtonClicked:) forControlEvents:UIControlEventTouchUpInside]; 
     }
     return _createButton;
 }
