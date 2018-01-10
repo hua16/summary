@@ -37,3 +37,5 @@
 "TLCDetailViewController_Make_Sure_Save_This_Project" = "是否对该条计划进行保存";
 "TLCDetailViewController_Save" = "保存";
 "TLCDetailViewController_Cancel" = "取消";
+"TLCDetailViewController_Sure" = "确定";
+"TLCDetailViewController_Delete_This_Project" = "确定删除该计划吗？";
