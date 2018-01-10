@@ -101,17 +101,16 @@
 - (void)removeObject:(TLPlanItem *)item
            itemIndex:(NSInteger)itemIndex;
 
-
 /**
  插入数据
-
+ 
+ @param item 插入的对象模型
  @param itemIndex 单项数据在数组中的位置，如今日计划中的数据，itemIndex为0
  @param subItemIndex 单项数据数组中所在的位置
- @param item 插入的对象模型
  */
-- (void)insertObjectAtIndex:(NSInteger)itemIndex
-               subItemIndex:(NSInteger)subItemIndex
-                       item:(TLPlanItem *)item;
+- (void)insertItem:(TLPlanItem *)item
+             index:(NSInteger)itemIndex
+      subItemIndex:(NSInteger)subItemIndex;
 
 /**
  获取数据
