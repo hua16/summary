@@ -230,7 +230,24 @@ typedef NS_ENUM(NSUInteger, TLCDetailViewActionType) {
     if (self.actionType == TLCDetailViewActionTypeSave) {
         [self saveProjectChanges:NULL];
     } else {
-        [self deleteProject];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:TLCLocalizedString(@"TLCDetailViewController_Tip")
+                                                                                 message:TLCLocalizedString(@"TLCDetailViewController_Delete_This_Project")
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+        self.alterViewController = alertController;
+        
+        [alertController addAction:[UIAlertAction actionWithTitle:TLCLocalizedString(@"TLCDetailViewController_Cancel")
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:NULL]];
+        @weakify(self)
+        [alertController addAction:[UIAlertAction actionWithTitle:TLCLocalizedString(@"TLCDetailViewController_Sure")
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * _Nonnull action) {
+            @strongify(self)
+            [self deleteProject];
+        }]];
+        [self presentViewController:alertController
+                           animated:YES
+                         completion:NULL];
     }
 }
 
