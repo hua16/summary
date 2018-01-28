@@ -218,11 +218,6 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
 - (void)addObserver {
     
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWillShow:)
-                                                 name:UIKeyboardWillShowNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification object:nil];
     
@@ -237,10 +232,6 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(onReceiveNotify:)
                                                  name:TLCNotificationDeletePlan object:nil];
-}
-
-- (void)keyboardWillShow:(NSNotification *)notification {
-    
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification {
@@ -546,7 +537,7 @@ static const CGFloat TLCMainViewControllerFlowLayoutWidthOffset = 45;
 - (void)mainInputView:(TLCMainInputView *)view creatProjectAtIndexPath:(NSIndexPath *)indexPath {
     
     TLPlanItemReq *itemReq = [[TLPlanItemReq alloc] init];
-    itemReq.important = NO;
+    itemReq.important = NO; 
     itemReq.title = [view inputText];
     itemReq.type = (TLSDKPlanType)(indexPath.row+1);
     

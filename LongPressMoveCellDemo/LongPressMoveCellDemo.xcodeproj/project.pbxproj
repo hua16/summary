@@ -249,7 +249,6 @@
 				CC8E04292003718C001E0365 /* Foundation */,
 				CC8E042C2003718C001E0365 /* Module */,
 				CC8E04242003718C001E0365 /* UIKit */,
-				CC8E042020036B58001E0365 /* Resource */,
 				CC8E03EE20036600001E0365 /* AppDelegate.h */,
 				CC8E03EF20036600001E0365 /* AppDelegate.m */,
 				CC8E03F120036600001E0365 /* ViewController.h */,
@@ -278,13 +277,6 @@
 				CC8E041420036601001E0365 /* Info.plist */,
 			);
 			path = LongPressMoveCellDemoUITests;
-			sourceTree = "<group>";
-		};
-		CC8E042020036B58001E0365 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		CC8E04242003718C001E0365 /* UIKit */ = {

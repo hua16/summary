@@ -62,7 +62,8 @@
     TLPlanItem *item = [[TLPlanItem alloc] init];
     item.title = requestItem.title;
     item.type = requestItem.type;
-    item.important = requestItem.important; 
+    item.important = requestItem.important;
+    item.idStr = [NSUUID UUID].UUIDString;
     NSMutableArray<TLPlanItem *> *items = [self planItemsAtIndex:indexPath.row];
     [items insertObject:item atIndex:0];
     if (completion) {
