@@ -14,9 +14,9 @@
 
 using namespace std;
 
-template <typename T>
 
 // 插入排序
+template <typename T>
 void insertionSort(T arr[], int n){
     
     // 对20000条数据进行排序，耗时0.638723 s
@@ -37,5 +37,19 @@ void insertionSort(T arr[], int n){
         arr[j] = insertValue;
     }
 };
+
+
+template <typename T>
+void insertionSort(T arr[], int l, int r) {
+    for (int i = l+1; i <= r; i++) {
+        T insertValue = arr[i];
+        int j;
+        for (j = i; j > l && insertValue < arr[j-1]; j--) {
+            arr[j] = arr[j - 1];
+        }
+        arr[j] = insertValue;
+    }
+}
+
 
 #endif /* insertionSort_hpp */
