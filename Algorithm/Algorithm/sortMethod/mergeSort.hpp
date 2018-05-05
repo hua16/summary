@@ -11,13 +11,14 @@
 
 #include <stdio.h>
 #include <algorithm>
+#include "insertionSort.hpp"
 using namespace std;
 
 template <typename T>
 
 // 将数组arr[l, mid]和arr[mid+1, r]两部分归并
 void ltmerge(T arr[], int l, int mid, int r) {
-    T aux[r-l+1];
+    T *aux = new T[r-l+1];
     // 将数组arr中[l,r]区间内的元素复制出来
     for (int i = l; i <= r; i++) {
         aux[i-l] = arr[i];
@@ -39,19 +40,26 @@ void ltmerge(T arr[], int l, int mid, int r) {
             j++;
         }
     }
+    delete [] aux;
 }
 
 // 递归使用归并排序,对arr[l...r]的范围进行排序
 template <typename T>
 void ltmergeSort(T arr[], int l, int r) {
-    if (l >= r) {
+    if (r - l < 15) {
+        insertionSort(arr, l, r);
         return;
     }
+//    if (l >= r) {
+//        return;
+//    }
     // 将数据均分为两部分
     int midIndex = (l + r)/2;
     ltmergeSort(arr, l, midIndex);
     ltmergeSort(arr, midIndex+1, r);
-    ltmerge(arr, l, midIndex, r);
+    if (arr[midIndex] > arr[midIndex+1]) {
+        ltmerge(arr, l, midIndex, r);
+    }
 }
 
 template <typename T>

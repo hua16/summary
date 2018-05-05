@@ -34,14 +34,15 @@ int main(int argc, const char * argv[]) {
     delete[] mergeArr;
     
 //    输出结果：
-//    Selection Sort : 0.475496 s
-//    Insertion Sort : 0.312144 s
+//    Selection Sort : 0.483302 s
+//    Insertion Sort : 0.314122 s
+//    Merge Sort : 0.022482 s
     
     // 测试2 有序性更强的测试
     cout<<"Test for more ordered random array, size = "<<N<<", random range [0, 3]"<<endl;
     selectionArr = SortTestTool::generataRandomArray(N,0,3);
-    insertionArr = SortTestTool::copyIntArray(selectionArr, 3);
-    mergeArr = SortTestTool::copyIntArray(selectionArr, 3);
+    insertionArr = SortTestTool::copyIntArray(selectionArr, N);
+    mergeArr = SortTestTool::copyIntArray(selectionArr, N);
     
     SortTestTool::testSort("Selection Sort", selectionSort, selectionArr, N);
     SortTestTool::testSort("Insertion Sort", insertionSort, insertionArr, N);
@@ -52,15 +53,16 @@ int main(int argc, const char * argv[]) {
     delete[] mergeArr;
     
 //    输出结果：
-//    Selection Sort : 0.469005 s
-//    Insertion Sort : 0.021836 s
+//    Selection Sort : 0.475358 s
+//    Insertion Sort : 0.239687 s
+//    Merge Sort : 0.028358 s
     
     // 测试3 测试近乎有序的数组
-    int swapTimes = 100;
+    int swapTimes = 0;
     cout<<"Test for nearly ordered array, size = "<<N<<", swap time = "<<swapTimes<<endl;
     selectionArr = SortTestTool::generateNearlyOrderedArray(N,swapTimes);
-    insertionArr = SortTestTool::copyIntArray(selectionArr, 3);
-    mergeArr = SortTestTool::copyIntArray(selectionArr, 3);
+    insertionArr = SortTestTool::copyIntArray(selectionArr, N);
+    mergeArr = SortTestTool::copyIntArray(selectionArr, N);
     
     SortTestTool::testSort("Selection Sort", selectionSort, selectionArr, N);
     SortTestTool::testSort("Insertion Sort", insertionSort, insertionArr, N);
@@ -70,9 +72,10 @@ int main(int argc, const char * argv[]) {
     delete[] mergeArr;
     delete[] insertionArr;
     
-//    输出结果： 
-//    Selection Sort : 0.460393 s
-//    Insertion Sort : 0.000381 s
+//    输出结果：
+//    Selection Sort : 0.474748 s
+//    Insertion Sort : 9.7e-05 s
+//    Merge Sort : 0.000306 s
     
     return 0;
 }
