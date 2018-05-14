@@ -12,6 +12,7 @@
 		C64DC56C2095861C0072EBF4 /* selectionSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C64DC56A2095861C0072EBF4 /* selectionSort.cpp */; };
 		C64DC56F209587D90072EBF4 /* insertionSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C64DC56D209587D90072EBF4 /* insertionSort.cpp */; };
 		C6BE4BF02097DA5B00159279 /* mergeSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6BE4BEE2097DA5B00159279 /* mergeSort.cpp */; };
+		CCB6F2E520A9AD7F002B5686 /* heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCB6F2E320A9AD7F002B5686 /* heap.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		C64DC56E209587D90072EBF4 /* insertionSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = insertionSort.hpp; sourceTree = "<group>"; };
 		C6BE4BEE2097DA5B00159279 /* mergeSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mergeSort.cpp; sourceTree = "<group>"; };
 		C6BE4BEF2097DA5B00159279 /* mergeSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mergeSort.hpp; sourceTree = "<group>"; };
+		CCB6F2E320A9AD7F002B5686 /* heap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = heap.cpp; sourceTree = "<group>"; };
+		CCB6F2E420A9AD7F002B5686 /* heap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = heap.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				C64DC56B2095861C0072EBF4 /* selectionSort.hpp */,
 				C6BE4BEE2097DA5B00159279 /* mergeSort.cpp */,
 				C6BE4BEF2097DA5B00159279 /* mergeSort.hpp */,
+				CCB6F2E320A9AD7F002B5686 /* heap.cpp */,
+				CCB6F2E420A9AD7F002B5686 /* heap.hpp */,
 			);
 			path = sortMethod;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				C64DC56F209587D90072EBF4 /* insertionSort.cpp in Sources */,
 				C632D513208EA6A900EAB815 /* main.cpp in Sources */,
 				C632D522208EAE3E00EAB815 /* SortTestTool.cpp in Sources */,
+				CCB6F2E520A9AD7F002B5686 /* heap.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

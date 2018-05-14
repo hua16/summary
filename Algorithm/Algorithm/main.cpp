@@ -12,6 +12,7 @@
 #include "selectionSort.hpp"
 #include "insertionSort.hpp"
 #include "mergeSort.hpp"
+#include "heap.hpp"
 
 using namespace std;
 
@@ -76,6 +77,13 @@ int main(int argc, const char * argv[]) {
 //    Selection Sort : 0.474748 s
 //    Insertion Sort : 9.7e-05 s
 //    Merge Sort : 0.000306 s
+    
+    MaxHeap<int> maxHeap = MaxHeap<int>(100);
+    srand((unsigned)time(NULL));
+    for (int i = 0; i < 50; i++) {
+        maxHeap.insert(rand()%100);
+    }
+    maxHeap.testPrint();
     
     return 0;
 }
