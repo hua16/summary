@@ -36,11 +36,39 @@ private:
         }
     }
     
+    //此树为完全二叉树
+    void shiftDown(int k) {
+        while (2*k <= count) {
+            // 选出左右节点中最大的那一个节点，如果其比父节点大，两者交换。
+            int j = 2*k;
+            if (j+1 <= count && data[j+1] > data[j]) {
+                j++;
+            }
+            
+            if (data[k] >= data[j]) break;
+            swap(data[k], data[j]);
+            k = j;
+        }
+    }
+    
 public:
-    MaxHeap(int capacity) {
-        data = new Item[capacity+1];
+    MaxHeap(int n) {
+        data = new Item[n+1];
+        capacity = n;
         count = 0;
-        this->capacity = capacity;
+    }
+    
+    MaxHeap(Item arr[], int n) {
+        data = new Item[n+1];
+        capacity = n;
+        for (int i = 0; i < n; i++) {
+            data[i+1] = arr[i];
+        }
+        count = n;
+        
+        for (int i = count/2; i>=1; i--) {
+            shiftDown(i);
+        }
     }
     
     ~MaxHeap() {
@@ -60,6 +88,18 @@ public:
         // 将插入的数据放在数组的末尾
         data[++count] = item;
         shiftUp(count);
+    }
+    
+    Item extractMax() {
+        assert(count > 0);
+        // 编号为1的元素就是最大值
+        Item ret = data[1];
+        
+        swap(data[1], data[count]);
+        count--;
+        shiftDown(1);
+        
+        return ret;
     }
     
 public:
