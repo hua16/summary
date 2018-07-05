@@ -10,10 +10,9 @@
 
 @implementation NSObject (Invocation)
 
-
 - (NSInvocation *)createInvocationWithSelector:(SEL)aSelector {
     //1、创建签名对象
-    NSMethodSignature*signature = [[self class] instanceMethodSignatureForSelector:aSelector];
+    NSMethodSignature *signature = [[self class] instanceMethodSignatureForSelector:aSelector];
     
     //2、判断传入的方法是否存在
     if (signature==nil) {
