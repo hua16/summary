@@ -44,6 +44,10 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
 #pragma mark - event response
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo {
     [self.eventProxy handleEvent:eventName userInfo:userInfo];
