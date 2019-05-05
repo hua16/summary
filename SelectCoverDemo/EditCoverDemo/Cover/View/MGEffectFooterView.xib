@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MGEffectFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wjo-Z2-8TR">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Rvo-9A-qmH"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zso-k0-phm">
+                    <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="RZs-XQ-ad6"/>
+                    </constraints>
+                    <state key="normal" image="aiFilmingVideo_shot_close.png"/>
+                    <connections>
+                        <action selector="cancelButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="1fe-gw-Spd"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="特效" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3H-gL-Q69">
+                    <rect key="frame" x="171" y="17" width="33" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGi-Bc-hXQ">
+                    <rect key="frame" x="320" y="0.0" width="55" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="r75-EE-zn5"/>
+                    </constraints>
+                    <state key="normal" image="aiFilmingVideo_shot_done.png"/>
+                    <connections>
+                        <action selector="doneButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="0wo-De-4YC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="zso-k0-phm" secondAttribute="bottom" id="1MS-By-SPb"/>
+                <constraint firstItem="bGi-Bc-hXQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3NV-tX-3mD"/>
+                <constraint firstItem="zso-k0-phm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5Pq-XC-jKh"/>
+                <constraint firstItem="Wjo-Z2-8TR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HXl-Ic-Vly"/>
+                <constraint firstAttribute="bottom" secondItem="bGi-Bc-hXQ" secondAttribute="bottom" id="J6L-T8-vwx"/>
+                <constraint firstItem="D3H-gL-Q69" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="K1y-3Z-RSA"/>
+                <constraint firstAttribute="trailing" secondItem="bGi-Bc-hXQ" secondAttribute="trailing" id="Pue-Ci-cTk"/>
+                <constraint firstItem="zso-k0-phm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="cqU-1s-YPh"/>
+                <constraint firstAttribute="trailing" secondItem="Wjo-Z2-8TR" secondAttribute="trailing" id="qyH-iD-n6B"/>
+                <constraint firstItem="Wjo-Z2-8TR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vNK-0h-fcv"/>
+                <constraint firstItem="D3H-gL-Q69" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="xy5-xe-GGW"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="cancelButton" destination="zso-k0-phm" id="ucW-DS-bKE"/>
+                <outlet property="doneButton" destination="bGi-Bc-hXQ" id="AUx-Im-27I"/>
+                <outlet property="nameLabel" destination="D3H-gL-Q69" id="PbG-DO-RwM"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="aiFilmingVideo_shot_close.png" width="22" height="22"/>
+        <image name="aiFilmingVideo_shot_done.png" width="25" height="25"/>
+    </resources>
+</document>

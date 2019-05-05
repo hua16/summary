@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C65E81C920DF3A6F00DA19FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C65E81C820DF3A6F00DA19FE /* AppDelegate.m */; };
+		C65E81CC20DF3A6F00DA19FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C65E81CB20DF3A6F00DA19FE /* ViewController.m */; };
+		C65E81CF20DF3A6F00DA19FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C65E81CD20DF3A6F00DA19FE /* Main.storyboard */; };
+		C65E81D120DF3A6F00DA19FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C65E81D020DF3A6F00DA19FE /* Assets.xcassets */; };
+		C65E81D420DF3A6F00DA19FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C65E81D220DF3A6F00DA19FE /* LaunchScreen.storyboard */; };
+		C65E81D720DF3A6F00DA19FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C65E81D620DF3A6F00DA19FE /* main.m */; };
+		C65E81E120DF3A6F00DA19FE /* swordFingerOfferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C65E81E020DF3A6F00DA19FE /* swordFingerOfferTests.m */; };
+		C65E81EC20DF3A6F00DA19FE /* swordFingerOfferUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C65E81EB20DF3A6F00DA19FE /* swordFingerOfferUITests.m */; };
+		C65E821E20DF3DBA00DA19FE /* LTSingletonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C65E821D20DF3DBA00DA19FE /* LTSingletonObject.m */; };
+		C65E822020DF3FD700DA19FE /* LTSingletonObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C65E821F20DF3FD700DA19FE /* LTSingletonObjectTests.m */; };
+		C65E822420DF425F00DA19FE /* FindDuplication.m in Sources */ = {isa = PBXBuildFile; fileRef = C65E822320DF425F00DA19FE /* FindDuplication.m */; };
+		C65E822620DF4C5300DA19FE /* 03_01_FindDuplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C65E822520DF4C5300DA19FE /* 03_01_FindDuplicationTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C65E81DD20DF3A6F00DA19FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C65E81BC20DF3A6F00DA19FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C65E81C320DF3A6F00DA19FE;
+			remoteInfo = swordFingerOffer;
+		};
+		C65E81E820DF3A6F00DA19FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C65E81BC20DF3A6F00DA19FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C65E81C320DF3A6F00DA19FE;
+			remoteInfo = swordFingerOffer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C65E81C420DF3A6F00DA19FE /* swordFingerOffer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swordFingerOffer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C65E81C720DF3A6F00DA19FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C65E81C820DF3A6F00DA19FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C65E81CA20DF3A6F00DA19FE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C65E81CB20DF3A6F00DA19FE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C65E81CE20DF3A6F00DA19FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C65E81D020DF3A6F00DA19FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C65E81D320DF3A6F00DA19FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C65E81D520DF3A6F00DA19FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C65E81D620DF3A6F00DA19FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C65E81DC20DF3A6F00DA19FE /* swordFingerOfferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swordFingerOfferTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C65E81E020DF3A6F00DA19FE /* swordFingerOfferTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = swordFingerOfferTests.m; sourceTree = "<group>"; };
+		C65E81E220DF3A6F00DA19FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C65E81E720DF3A6F00DA19FE /* swordFingerOfferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swordFingerOfferUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C65E81EB20DF3A6F00DA19FE /* swordFingerOfferUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = swordFingerOfferUITests.m; sourceTree = "<group>"; };
+		C65E81ED20DF3A6F00DA19FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C65E821C20DF3DBA00DA19FE /* LTSingletonObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTSingletonObject.h; sourceTree = "<group>"; };
+		C65E821D20DF3DBA00DA19FE /* LTSingletonObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTSingletonObject.m; sourceTree = "<group>"; };
+		C65E821F20DF3FD700DA19FE /* LTSingletonObjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTSingletonObjectTests.m; sourceTree = "<group>"; };
+		C65E822220DF425F00DA19FE /* FindDuplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindDuplication.h; sourceTree = "<group>"; };
+		C65E822320DF425F00DA19FE /* FindDuplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindDuplication.m; sourceTree = "<group>"; };
+		C65E822520DF4C5300DA19FE /* 03_01_FindDuplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 03_01_FindDuplicationTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C65E81C120DF3A6F00DA19FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C65E81D920DF3A6F00DA19FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C65E81E420DF3A6F00DA19FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C65E81BB20DF3A6F00DA19FE = {
+			isa = PBXGroup;
+			children = (
+				C65E81C620DF3A6F00DA19FE /* swordFingerOffer */,
+				C65E81DF20DF3A6F00DA19FE /* swordFingerOfferTests */,
+				C65E81EA20DF3A6F00DA19FE /* swordFingerOfferUITests */,
+				C65E81C520DF3A6F00DA19FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C65E81C520DF3A6F00DA19FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C65E81C420DF3A6F00DA19FE /* swordFingerOffer.app */,
+				C65E81DC20DF3A6F00DA19FE /* swordFingerOfferTests.xctest */,
+				C65E81E720DF3A6F00DA19FE /* swordFingerOfferUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C65E81C620DF3A6F00DA19FE /* swordFingerOffer */ = {
+			isa = PBXGroup;
+			children = (
+				C65E81C720DF3A6F00DA19FE /* AppDelegate.h */,
+				C65E81C820DF3A6F00DA19FE /* AppDelegate.m */,
+				C65E81D020DF3A6F00DA19FE /* Assets.xcassets */,
+				C65E81D520DF3A6F00DA19FE /* Info.plist */,
+				C65E81F920DF3AD400DA19FE /* InterviewQuestion */,
+				C65E81D220DF3A6F00DA19FE /* LaunchScreen.storyboard */,
+				C65E81D620DF3A6F00DA19FE /* main.m */,
+				C65E81CD20DF3A6F00DA19FE /* Main.storyboard */,
+				C65E81CA20DF3A6F00DA19FE /* ViewController.h */,
+				C65E81CB20DF3A6F00DA19FE /* ViewController.m */,
+			);
+			path = swordFingerOffer;
+			sourceTree = "<group>";
+		};
+		C65E81DF20DF3A6F00DA19FE /* swordFingerOfferTests */ = {
+			isa = PBXGroup;
+			children = (
+				C65E81E020DF3A6F00DA19FE /* swordFingerOfferTests.m */,
+				C65E81E220DF3A6F00DA19FE /* Info.plist */,
+				C65E821F20DF3FD700DA19FE /* LTSingletonObjectTests.m */,
+				C65E822520DF4C5300DA19FE /* 03_01_FindDuplicationTests.m */,
+			);
+			path = swordFingerOfferTests;
+			sourceTree = "<group>";
+		};
+		C65E81EA20DF3A6F00DA19FE /* swordFingerOfferUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C65E81EB20DF3A6F00DA19FE /* swordFingerOfferUITests.m */,
+				C65E81ED20DF3A6F00DA19FE /* Info.plist */,
+			);
+			path = swordFingerOfferUITests;
+			sourceTree = "<group>";
+		};
+		C65E81F920DF3AD400DA19FE /* InterviewQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				C65E81FA20DF3BE200DA19FE /* InterviewQuestion */,
+			);
+			path = InterviewQuestion;
+			sourceTree = "<group>";
+		};
+		C65E81FA20DF3BE200DA19FE /* InterviewQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				C65E822120DF41AF00DA19FE /* 03_01_DuplicationInArray */,
+				C65E821B20DF3D8700DA19FE /* 02_Singleton */,
+			);
+			name = InterviewQuestion;
+			sourceTree = "<group>";
+		};
+		C65E821B20DF3D8700DA19FE /* 02_Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				C65E821C20DF3DBA00DA19FE /* LTSingletonObject.h */,
+				C65E821D20DF3DBA00DA19FE /* LTSingletonObject.m */,
+			);
+			path = 02_Singleton;
+			sourceTree = "<group>";
+		};
+		C65E822120DF41AF00DA19FE /* 03_01_DuplicationInArray */ = {
+			isa = PBXGroup;
+			children = (
+				C65E822220DF425F00DA19FE /* FindDuplication.h */,
+				C65E822320DF425F00DA19FE /* FindDuplication.m */,
+			);
+			path = 03_01_DuplicationInArray;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C65E81C320DF3A6F00DA19FE /* swordFingerOffer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C65E81F020DF3A6F00DA19FE /* Build configuration list for PBXNativeTarget "swordFingerOffer" */;
+			buildPhases = (
+				C65E81C020DF3A6F00DA19FE /* Sources */,
+				C65E81C120DF3A6F00DA19FE /* Frameworks */,
+				C65E81C220DF3A6F00DA19FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = swordFingerOffer;
+			productName = swordFingerOffer;
+			productReference = C65E81C420DF3A6F00DA19FE /* swordFingerOffer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C65E81DB20DF3A6F00DA19FE /* swordFingerOfferTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C65E81F320DF3A6F00DA19FE /* Build configuration list for PBXNativeTarget "swordFingerOfferTests" */;
+			buildPhases = (
+				C65E81D820DF3A6F00DA19FE /* Sources */,
+				C65E81D920DF3A6F00DA19FE /* Frameworks */,
+				C65E81DA20DF3A6F00DA19FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C65E81DE20DF3A6F00DA19FE /* PBXTargetDependency */,
+			);
+			name = swordFingerOfferTests;
+			productName = swordFingerOfferTests;
+			productReference = C65E81DC20DF3A6F00DA19FE /* swordFingerOfferTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C65E81E620DF3A6F00DA19FE /* swordFingerOfferUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C65E81F620DF3A6F00DA19FE /* Build configuration list for PBXNativeTarget "swordFingerOfferUITests" */;
+			buildPhases = (
+				C65E81E320DF3A6F00DA19FE /* Sources */,
+				C65E81E420DF3A6F00DA19FE /* Frameworks */,
+				C65E81E520DF3A6F00DA19FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C65E81E920DF3A6F00DA19FE /* PBXTargetDependency */,
+			);
+			name = swordFingerOfferUITests;
+			productName = swordFingerOfferUITests;
+			productReference = C65E81E720DF3A6F00DA19FE /* swordFingerOfferUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C65E81BC20DF3A6F00DA19FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = huage;
+				TargetAttributes = {
+					C65E81C320DF3A6F00DA19FE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					C65E81DB20DF3A6F00DA19FE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C65E81C320DF3A6F00DA19FE;
+					};
+					C65E81E620DF3A6F00DA19FE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C65E81C320DF3A6F00DA19FE;
+					};
+				};
+			};
+			buildConfigurationList = C65E81BF20DF3A6F00DA19FE /* Build configuration list for PBXProject "swordFingerOffer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C65E81BB20DF3A6F00DA19FE;
+			productRefGroup = C65E81C520DF3A6F00DA19FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C65E81C320DF3A6F00DA19FE /* swordFingerOffer */,
+				C65E81DB20DF3A6F00DA19FE /* swordFingerOfferTests */,
+				C65E81E620DF3A6F00DA19FE /* swordFingerOfferUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C65E81C220DF3A6F00DA19FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65E81D420DF3A6F00DA19FE /* LaunchScreen.storyboard in Resources */,
+				C65E81D120DF3A6F00DA19FE /* Assets.xcassets in Resources */,
+				C65E81CF20DF3A6F00DA19FE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C65E81DA20DF3A6F00DA19FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C65E81E520DF3A6F00DA19FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C65E81C020DF3A6F00DA19FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65E822420DF425F00DA19FE /* FindDuplication.m in Sources */,
+				C65E821E20DF3DBA00DA19FE /* LTSingletonObject.m in Sources */,
+				C65E81CC20DF3A6F00DA19FE /* ViewController.m in Sources */,
+				C65E81D720DF3A6F00DA19FE /* main.m in Sources */,
+				C65E81C920DF3A6F00DA19FE /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C65E81D820DF3A6F00DA19FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65E822020DF3FD700DA19FE /* LTSingletonObjectTests.m in Sources */,
+				C65E81E120DF3A6F00DA19FE /* swordFingerOfferTests.m in Sources */,
+				C65E822620DF4C5300DA19FE /* 03_01_FindDuplicationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C65E81E320DF3A6F00DA19FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65E81EC20DF3A6F00DA19FE /* swordFingerOfferUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C65E81DE20DF3A6F00DA19FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C65E81C320DF3A6F00DA19FE /* swordFingerOffer */;
+			targetProxy = C65E81DD20DF3A6F00DA19FE /* PBXContainerItemProxy */;
+		};
+		C65E81E920DF3A6F00DA19FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C65E81C320DF3A6F00DA19FE /* swordFingerOffer */;
+			targetProxy = C65E81E820DF3A6F00DA19FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C65E81CD20DF3A6F00DA19FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C65E81CE20DF3A6F00DA19FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C65E81D220DF3A6F00DA19FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C65E81D320DF3A6F00DA19FE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C65E81EE20DF3A6F00DA19FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C65E81EF20DF3A6F00DA19FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C65E81F120DF3A6F00DA19FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = swordFingerOffer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huage.company.swordFingerOffer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C65E81F220DF3A6F00DA19FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = swordFingerOffer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huage.company.swordFingerOffer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C65E81F420DF3A6F00DA19FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = swordFingerOfferTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huage.company.swordFingerOfferTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swordFingerOffer.app/swordFingerOffer";
+			};
+			name = Debug;
+		};
+		C65E81F520DF3A6F00DA19FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = swordFingerOfferTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huage.company.swordFingerOfferTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swordFingerOffer.app/swordFingerOffer";
+			};
+			name = Release;
+		};
+		C65E81F720DF3A6F00DA19FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = swordFingerOfferUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huage.company.swordFingerOfferUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = swordFingerOffer;
+			};
+			name = Debug;
+		};
+		C65E81F820DF3A6F00DA19FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = swordFingerOfferUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huage.company.swordFingerOfferUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = swordFingerOffer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C65E81BF20DF3A6F00DA19FE /* Build configuration list for PBXProject "swordFingerOffer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C65E81EE20DF3A6F00DA19FE /* Debug */,
+				C65E81EF20DF3A6F00DA19FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C65E81F020DF3A6F00DA19FE /* Build configuration list for PBXNativeTarget "swordFingerOffer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C65E81F120DF3A6F00DA19FE /* Debug */,
+				C65E81F220DF3A6F00DA19FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C65E81F320DF3A6F00DA19FE /* Build configuration list for PBXNativeTarget "swordFingerOfferTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C65E81F420DF3A6F00DA19FE /* Debug */,
+				C65E81F520DF3A6F00DA19FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C65E81F620DF3A6F00DA19FE /* Build configuration list for PBXNativeTarget "swordFingerOfferUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C65E81F720DF3A6F00DA19FE /* Debug */,
+				C65E81F820DF3A6F00DA19FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C65E81BC20DF3A6F00DA19FE /* Project object */;
+}
