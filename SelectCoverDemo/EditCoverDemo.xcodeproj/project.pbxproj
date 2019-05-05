@@ -1,0 +1,742 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BEF79C4BBD2BD142BD1472FF /* libPods-EditCoverDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5747FE823CB4B3074DA402 /* libPods-EditCoverDemo.a */; };
+		E5D3E32A227E7CCF0078EA68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E329227E7CCF0078EA68 /* AppDelegate.m */; };
+		E5D3E32D227E7CCF0078EA68 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E32C227E7CCF0078EA68 /* ViewController.m */; };
+		E5D3E330227E7CCF0078EA68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D3E32E227E7CCF0078EA68 /* Main.storyboard */; };
+		E5D3E332227E7CD00078EA68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5D3E331227E7CD00078EA68 /* Assets.xcassets */; };
+		E5D3E335227E7CD00078EA68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D3E333227E7CD00078EA68 /* LaunchScreen.storyboard */; };
+		E5D3E338227E7CD00078EA68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E337227E7CD00078EA68 /* main.m */; };
+		E5D3E342227E7CD00078EA68 /* EditCoverDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E341227E7CD00078EA68 /* EditCoverDemoTests.m */; };
+		E5D3E34D227E7CD00078EA68 /* EditCoverDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E34C227E7CD00078EA68 /* EditCoverDemoUITests.m */; };
+		E5D3E37E227E92F60078EA68 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E5D3E37D227E92F60078EA68 /* test.mp4 */; };
+		E5D3E397227E9C100078EA68 /* MGEffectFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5D3E381227E9C100078EA68 /* MGEffectFooterView.xib */; };
+		E5D3E398227E9C100078EA68 /* MGEffectFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E382227E9C100078EA68 /* MGEffectFooterView.m */; };
+		E5D3E399227E9C100078EA68 /* MGVideoDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E383227E9C100078EA68 /* MGVideoDisplayView.m */; };
+		E5D3E39A227E9C100078EA68 /* MGLocalVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E385227E9C100078EA68 /* MGLocalVideoPlayerView.m */; };
+		E5D3E39B227E9C100078EA68 /* MGCoverImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5D3E386227E9C100078EA68 /* MGCoverImageCollectionViewCell.xib */; };
+		E5D3E39C227E9C100078EA68 /* MGCoverImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E388227E9C100078EA68 /* MGCoverImageCollectionViewCell.m */; };
+		E5D3E39D227E9C100078EA68 /* AVPlayer+MGSeekSmoothly.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E38D227E9C100078EA68 /* AVPlayer+MGSeekSmoothly.m */; };
+		E5D3E39E227E9C100078EA68 /* GTVideoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E38E227E9C100078EA68 /* GTVideoTool.m */; };
+		E5D3E39F227E9C100078EA68 /* MGVideoPlayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E38F227E9C100078EA68 /* MGVideoPlayHelper.m */; };
+		E5D3E3A0227E9C100078EA68 /* MGAIEditCoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E394227E9C100078EA68 /* MGAIEditCoverViewController.m */; };
+		E5D3E3A1227E9C100078EA68 /* MGAIEditCoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5D3E396227E9C100078EA68 /* MGAIEditCoverViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E5D3E33E227E7CD00078EA68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5D3E31D227E7CCF0078EA68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5D3E324227E7CCF0078EA68;
+			remoteInfo = EditCoverDemo;
+		};
+		E5D3E349227E7CD00078EA68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5D3E31D227E7CCF0078EA68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5D3E324227E7CCF0078EA68;
+			remoteInfo = EditCoverDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02AD6071F7144230497CA362 /* Pods-EditCoverDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EditCoverDemo.release.xcconfig"; path = "Target Support Files/Pods-EditCoverDemo/Pods-EditCoverDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8FBD0BD6B8EA8AC5DFEC5959 /* Pods-EditCoverDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EditCoverDemo.debug.xcconfig"; path = "Target Support Files/Pods-EditCoverDemo/Pods-EditCoverDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		DE5747FE823CB4B3074DA402 /* libPods-EditCoverDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EditCoverDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D3E325227E7CCF0078EA68 /* EditCoverDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EditCoverDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D3E328227E7CCF0078EA68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E5D3E329227E7CCF0078EA68 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E5D3E32B227E7CCF0078EA68 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E5D3E32C227E7CCF0078EA68 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E5D3E32F227E7CCF0078EA68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E5D3E331227E7CD00078EA68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E5D3E334227E7CD00078EA68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E5D3E336227E7CD00078EA68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5D3E337227E7CD00078EA68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E5D3E33D227E7CD00078EA68 /* EditCoverDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EditCoverDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D3E341227E7CD00078EA68 /* EditCoverDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditCoverDemoTests.m; sourceTree = "<group>"; };
+		E5D3E343227E7CD00078EA68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5D3E348227E7CD00078EA68 /* EditCoverDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EditCoverDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D3E34C227E7CD00078EA68 /* EditCoverDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditCoverDemoUITests.m; sourceTree = "<group>"; };
+		E5D3E34E227E7CD00078EA68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5D3E37D227E92F60078EA68 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
+		E5D3E380227E9C100078EA68 /* MGLocalVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGLocalVideoPlayerView.h; sourceTree = "<group>"; };
+		E5D3E381227E9C100078EA68 /* MGEffectFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MGEffectFooterView.xib; sourceTree = "<group>"; };
+		E5D3E382227E9C100078EA68 /* MGEffectFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGEffectFooterView.m; sourceTree = "<group>"; };
+		E5D3E383227E9C100078EA68 /* MGVideoDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGVideoDisplayView.m; sourceTree = "<group>"; };
+		E5D3E384227E9C100078EA68 /* MGCoverImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGCoverImageCollectionViewCell.h; sourceTree = "<group>"; };
+		E5D3E385227E9C100078EA68 /* MGLocalVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGLocalVideoPlayerView.m; sourceTree = "<group>"; };
+		E5D3E386227E9C100078EA68 /* MGCoverImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MGCoverImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		E5D3E387227E9C100078EA68 /* MGEffectFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGEffectFooterView.h; sourceTree = "<group>"; };
+		E5D3E388227E9C100078EA68 /* MGCoverImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCoverImageCollectionViewCell.m; sourceTree = "<group>"; };
+		E5D3E389227E9C100078EA68 /* MGVideoDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGVideoDisplayView.h; sourceTree = "<group>"; };
+		E5D3E38C227E9C100078EA68 /* MGEidtCoverConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGEidtCoverConst.h; sourceTree = "<group>"; };
+		E5D3E38D227E9C100078EA68 /* AVPlayer+MGSeekSmoothly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVPlayer+MGSeekSmoothly.m"; sourceTree = "<group>"; };
+		E5D3E38E227E9C100078EA68 /* GTVideoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTVideoTool.m; sourceTree = "<group>"; };
+		E5D3E38F227E9C100078EA68 /* MGVideoPlayHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGVideoPlayHelper.m; sourceTree = "<group>"; };
+		E5D3E390227E9C100078EA68 /* AVPlayer+MGSeekSmoothly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayer+MGSeekSmoothly.h"; sourceTree = "<group>"; };
+		E5D3E391227E9C100078EA68 /* GTVideoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTVideoTool.h; sourceTree = "<group>"; };
+		E5D3E392227E9C100078EA68 /* MGVideoPlayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGVideoPlayHelper.h; sourceTree = "<group>"; };
+		E5D3E394227E9C100078EA68 /* MGAIEditCoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAIEditCoverViewController.m; sourceTree = "<group>"; };
+		E5D3E395227E9C100078EA68 /* MGAIEditCoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAIEditCoverViewController.h; sourceTree = "<group>"; };
+		E5D3E396227E9C100078EA68 /* MGAIEditCoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MGAIEditCoverViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E5D3E322227E7CCF0078EA68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEF79C4BBD2BD142BD1472FF /* libPods-EditCoverDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D3E33A227E7CD00078EA68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D3E345227E7CD00078EA68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3626F89E0891C807B9B49418 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE5747FE823CB4B3074DA402 /* libPods-EditCoverDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5D3E31C227E7CCF0078EA68 = {
+			isa = PBXGroup;
+			children = (
+				E5D3E327227E7CCF0078EA68 /* EditCoverDemo */,
+				E5D3E340227E7CD00078EA68 /* EditCoverDemoTests */,
+				E5D3E34B227E7CD00078EA68 /* EditCoverDemoUITests */,
+				E5D3E326227E7CCF0078EA68 /* Products */,
+				FC2416DA10F6D3BAFCDFD253 /* Pods */,
+				3626F89E0891C807B9B49418 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E5D3E326227E7CCF0078EA68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5D3E325227E7CCF0078EA68 /* EditCoverDemo.app */,
+				E5D3E33D227E7CD00078EA68 /* EditCoverDemoTests.xctest */,
+				E5D3E348227E7CD00078EA68 /* EditCoverDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E5D3E327227E7CCF0078EA68 /* EditCoverDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E5D3E37D227E92F60078EA68 /* test.mp4 */,
+				E5D3E35C227E7F7A0078EA68 /* Cover */,
+				E5D3E328227E7CCF0078EA68 /* AppDelegate.h */,
+				E5D3E329227E7CCF0078EA68 /* AppDelegate.m */,
+				E5D3E32B227E7CCF0078EA68 /* ViewController.h */,
+				E5D3E32C227E7CCF0078EA68 /* ViewController.m */,
+				E5D3E32E227E7CCF0078EA68 /* Main.storyboard */,
+				E5D3E331227E7CD00078EA68 /* Assets.xcassets */,
+				E5D3E333227E7CD00078EA68 /* LaunchScreen.storyboard */,
+				E5D3E336227E7CD00078EA68 /* Info.plist */,
+				E5D3E337227E7CD00078EA68 /* main.m */,
+			);
+			path = EditCoverDemo;
+			sourceTree = "<group>";
+		};
+		E5D3E340227E7CD00078EA68 /* EditCoverDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5D3E341227E7CD00078EA68 /* EditCoverDemoTests.m */,
+				E5D3E343227E7CD00078EA68 /* Info.plist */,
+			);
+			path = EditCoverDemoTests;
+			sourceTree = "<group>";
+		};
+		E5D3E34B227E7CD00078EA68 /* EditCoverDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E5D3E34C227E7CD00078EA68 /* EditCoverDemoUITests.m */,
+				E5D3E34E227E7CD00078EA68 /* Info.plist */,
+			);
+			path = EditCoverDemoUITests;
+			sourceTree = "<group>";
+		};
+		E5D3E35C227E7F7A0078EA68 /* Cover */ = {
+			isa = PBXGroup;
+			children = (
+				E5D3E38B227E9C100078EA68 /* Assist */,
+				E5D3E393227E9C100078EA68 /* Controller */,
+				E5D3E38A227E9C100078EA68 /* Tool */,
+				E5D3E37F227E9C100078EA68 /* View */,
+			);
+			path = Cover;
+			sourceTree = "<group>";
+		};
+		E5D3E37F227E9C100078EA68 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5D3E384227E9C100078EA68 /* MGCoverImageCollectionViewCell.h */,
+				E5D3E388227E9C100078EA68 /* MGCoverImageCollectionViewCell.m */,
+				E5D3E386227E9C100078EA68 /* MGCoverImageCollectionViewCell.xib */,
+				E5D3E387227E9C100078EA68 /* MGEffectFooterView.h */,
+				E5D3E382227E9C100078EA68 /* MGEffectFooterView.m */,
+				E5D3E381227E9C100078EA68 /* MGEffectFooterView.xib */,
+				E5D3E380227E9C100078EA68 /* MGLocalVideoPlayerView.h */,
+				E5D3E385227E9C100078EA68 /* MGLocalVideoPlayerView.m */,
+				E5D3E389227E9C100078EA68 /* MGVideoDisplayView.h */,
+				E5D3E383227E9C100078EA68 /* MGVideoDisplayView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E5D3E38A227E9C100078EA68 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		E5D3E38B227E9C100078EA68 /* Assist */ = {
+			isa = PBXGroup;
+			children = (
+				E5D3E38C227E9C100078EA68 /* MGEidtCoverConst.h */,
+				E5D3E38D227E9C100078EA68 /* AVPlayer+MGSeekSmoothly.m */,
+				E5D3E38E227E9C100078EA68 /* GTVideoTool.m */,
+				E5D3E38F227E9C100078EA68 /* MGVideoPlayHelper.m */,
+				E5D3E390227E9C100078EA68 /* AVPlayer+MGSeekSmoothly.h */,
+				E5D3E391227E9C100078EA68 /* GTVideoTool.h */,
+				E5D3E392227E9C100078EA68 /* MGVideoPlayHelper.h */,
+			);
+			path = Assist;
+			sourceTree = "<group>";
+		};
+		E5D3E393227E9C100078EA68 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E5D3E395227E9C100078EA68 /* MGAIEditCoverViewController.h */,
+				E5D3E394227E9C100078EA68 /* MGAIEditCoverViewController.m */,
+				E5D3E396227E9C100078EA68 /* MGAIEditCoverViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FC2416DA10F6D3BAFCDFD253 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FBD0BD6B8EA8AC5DFEC5959 /* Pods-EditCoverDemo.debug.xcconfig */,
+				02AD6071F7144230497CA362 /* Pods-EditCoverDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E5D3E324227E7CCF0078EA68 /* EditCoverDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5D3E351227E7CD00078EA68 /* Build configuration list for PBXNativeTarget "EditCoverDemo" */;
+			buildPhases = (
+				AAD66065AFEA9A342C9A2B05 /* [CP] Check Pods Manifest.lock */,
+				E5D3E321227E7CCF0078EA68 /* Sources */,
+				E5D3E322227E7CCF0078EA68 /* Frameworks */,
+				E5D3E323227E7CCF0078EA68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EditCoverDemo;
+			productName = EditCoverDemo;
+			productReference = E5D3E325227E7CCF0078EA68 /* EditCoverDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E5D3E33C227E7CD00078EA68 /* EditCoverDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5D3E354227E7CD00078EA68 /* Build configuration list for PBXNativeTarget "EditCoverDemoTests" */;
+			buildPhases = (
+				E5D3E339227E7CD00078EA68 /* Sources */,
+				E5D3E33A227E7CD00078EA68 /* Frameworks */,
+				E5D3E33B227E7CD00078EA68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5D3E33F227E7CD00078EA68 /* PBXTargetDependency */,
+			);
+			name = EditCoverDemoTests;
+			productName = EditCoverDemoTests;
+			productReference = E5D3E33D227E7CD00078EA68 /* EditCoverDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E5D3E347227E7CD00078EA68 /* EditCoverDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5D3E357227E7CD00078EA68 /* Build configuration list for PBXNativeTarget "EditCoverDemoUITests" */;
+			buildPhases = (
+				E5D3E344227E7CD00078EA68 /* Sources */,
+				E5D3E345227E7CD00078EA68 /* Frameworks */,
+				E5D3E346227E7CD00078EA68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5D3E34A227E7CD00078EA68 /* PBXTargetDependency */,
+			);
+			name = EditCoverDemoUITests;
+			productName = EditCoverDemoUITests;
+			productReference = E5D3E348227E7CD00078EA68 /* EditCoverDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E5D3E31D227E7CCF0078EA68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "徐利华";
+				TargetAttributes = {
+					E5D3E324227E7CCF0078EA68 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					E5D3E33C227E7CD00078EA68 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = E5D3E324227E7CCF0078EA68;
+					};
+					E5D3E347227E7CD00078EA68 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = E5D3E324227E7CCF0078EA68;
+					};
+				};
+			};
+			buildConfigurationList = E5D3E320227E7CCF0078EA68 /* Build configuration list for PBXProject "EditCoverDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E5D3E31C227E7CCF0078EA68;
+			productRefGroup = E5D3E326227E7CCF0078EA68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5D3E324227E7CCF0078EA68 /* EditCoverDemo */,
+				E5D3E33C227E7CD00078EA68 /* EditCoverDemoTests */,
+				E5D3E347227E7CD00078EA68 /* EditCoverDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E5D3E323227E7CCF0078EA68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5D3E39B227E9C100078EA68 /* MGCoverImageCollectionViewCell.xib in Resources */,
+				E5D3E335227E7CD00078EA68 /* LaunchScreen.storyboard in Resources */,
+				E5D3E332227E7CD00078EA68 /* Assets.xcassets in Resources */,
+				E5D3E3A1227E9C100078EA68 /* MGAIEditCoverViewController.xib in Resources */,
+				E5D3E330227E7CCF0078EA68 /* Main.storyboard in Resources */,
+				E5D3E37E227E92F60078EA68 /* test.mp4 in Resources */,
+				E5D3E397227E9C100078EA68 /* MGEffectFooterView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D3E33B227E7CD00078EA68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D3E346227E7CD00078EA68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AAD66065AFEA9A342C9A2B05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EditCoverDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E5D3E321227E7CCF0078EA68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5D3E32D227E7CCF0078EA68 /* ViewController.m in Sources */,
+				E5D3E3A0227E9C100078EA68 /* MGAIEditCoverViewController.m in Sources */,
+				E5D3E399227E9C100078EA68 /* MGVideoDisplayView.m in Sources */,
+				E5D3E338227E7CD00078EA68 /* main.m in Sources */,
+				E5D3E39A227E9C100078EA68 /* MGLocalVideoPlayerView.m in Sources */,
+				E5D3E398227E9C100078EA68 /* MGEffectFooterView.m in Sources */,
+				E5D3E39C227E9C100078EA68 /* MGCoverImageCollectionViewCell.m in Sources */,
+				E5D3E39E227E9C100078EA68 /* GTVideoTool.m in Sources */,
+				E5D3E39F227E9C100078EA68 /* MGVideoPlayHelper.m in Sources */,
+				E5D3E39D227E9C100078EA68 /* AVPlayer+MGSeekSmoothly.m in Sources */,
+				E5D3E32A227E7CCF0078EA68 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D3E339227E7CD00078EA68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5D3E342227E7CD00078EA68 /* EditCoverDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D3E344227E7CD00078EA68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5D3E34D227E7CD00078EA68 /* EditCoverDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E5D3E33F227E7CD00078EA68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5D3E324227E7CCF0078EA68 /* EditCoverDemo */;
+			targetProxy = E5D3E33E227E7CD00078EA68 /* PBXContainerItemProxy */;
+		};
+		E5D3E34A227E7CD00078EA68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5D3E324227E7CCF0078EA68 /* EditCoverDemo */;
+			targetProxy = E5D3E349227E7CD00078EA68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E5D3E32E227E7CCF0078EA68 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5D3E32F227E7CCF0078EA68 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E5D3E333227E7CD00078EA68 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5D3E334227E7CD00078EA68 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E5D3E34F227E7CD00078EA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E5D3E350227E7CD00078EA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E5D3E352227E7CD00078EA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FBD0BD6B8EA8AC5DFEC5959 /* Pods-EditCoverDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = EditCoverDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = leverTsui.EditCoverDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E5D3E353227E7CD00078EA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02AD6071F7144230497CA362 /* Pods-EditCoverDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = EditCoverDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = leverTsui.EditCoverDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E5D3E355227E7CD00078EA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = EditCoverDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = leverTsui.EditCoverDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EditCoverDemo.app/EditCoverDemo";
+			};
+			name = Debug;
+		};
+		E5D3E356227E7CD00078EA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = EditCoverDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = leverTsui.EditCoverDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EditCoverDemo.app/EditCoverDemo";
+			};
+			name = Release;
+		};
+		E5D3E358227E7CD00078EA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = EditCoverDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = leverTsui.EditCoverDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EditCoverDemo;
+			};
+			name = Debug;
+		};
+		E5D3E359227E7CD00078EA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZK776JE98H;
+				INFOPLIST_FILE = EditCoverDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = leverTsui.EditCoverDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EditCoverDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E5D3E320227E7CCF0078EA68 /* Build configuration list for PBXProject "EditCoverDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5D3E34F227E7CD00078EA68 /* Debug */,
+				E5D3E350227E7CD00078EA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5D3E351227E7CD00078EA68 /* Build configuration list for PBXNativeTarget "EditCoverDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5D3E352227E7CD00078EA68 /* Debug */,
+				E5D3E353227E7CD00078EA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5D3E354227E7CD00078EA68 /* Build configuration list for PBXNativeTarget "EditCoverDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5D3E355227E7CD00078EA68 /* Debug */,
+				E5D3E356227E7CD00078EA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5D3E357227E7CD00078EA68 /* Build configuration list for PBXNativeTarget "EditCoverDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5D3E358227E7CD00078EA68 /* Debug */,
+				E5D3E359227E7CD00078EA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E5D3E31D227E7CCF0078EA68 /* Project object */;
+}
