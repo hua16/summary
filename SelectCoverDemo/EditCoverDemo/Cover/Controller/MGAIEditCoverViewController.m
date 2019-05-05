@@ -11,7 +11,6 @@
 #import "MGEffectFooterView.h"
 #import "MGLocalVideoPlayerView.h"
 #import "MGVideoDisplayView.h"
-#import "GTVideoTool.h"
 #import "MGEidtCoverConst.h"
 #import "MGVideoPlayHelper.h"
 
@@ -141,7 +140,7 @@ UICollectionViewDelegateFlowLayout>
     [self.panView addSubview:self.displayView];
     
     self.clipVideoStartTime = 0;
-    self.clipVideoEndTime = [GTVideoTool videoDurationFromVideoPath:self.videoPath] / 1000;
+    self.clipVideoEndTime = [MGVideoPlayHelper videoDurationFromVideoPath:self.videoPath] / 1000;
     
     self.playerView.videoStartTime = self.clipVideoStartTime;
     self.playerView.videoEndTime = self.clipVideoEndTime * 1000;
@@ -157,7 +156,7 @@ UICollectionViewDelegateFlowLayout>
         make.bottom.mas_equalTo(-iPhoneXBottomOffset);
     }];
     
-    if ([GTVideoTool isLandscape:self.videoPath]) {
+    if ([MGVideoPlayHelper isLandscape:self.videoPath]) {
         self.animationImagViewLeftConstraint.constant = 0;
         self.animationImageViewRightConstraint.constant = 0;
         self.animationImagView.contentMode = UIViewContentModeScaleAspectFit;
@@ -188,6 +187,7 @@ UICollectionViewDelegateFlowLayout>
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.collectionView reloadData];
+            self.dragButton.backgroundColor = [UIColor redColor];
             [self.dragButton setImage:converImage forState:UIControlStateNormal];
         });
     });

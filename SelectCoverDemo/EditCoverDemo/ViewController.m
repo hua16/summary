@@ -22,7 +22,7 @@
 
 - (IBAction)showCover:(UIButton *)sender {
     NSString *videoPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"mp4"];
-    MGAIEditCoverViewController *coverViewController = [[MGAIEditCoverViewController alloc] initWithVideoPath:videoPath coverTime:1000 coverTimeBlock:^(CGFloat coverTime) {
+    MGAIEditCoverViewController *coverViewController = [[MGAIEditCoverViewController alloc] initWithVideoPath:videoPath coverTime:1 coverTimeBlock:^(CGFloat coverTime) {
         NSLog(@"切换封面成功");
     }];
     [self.navigationController pushViewController:coverViewController animated:YES];

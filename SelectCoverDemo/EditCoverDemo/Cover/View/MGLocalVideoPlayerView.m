@@ -11,7 +11,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "AVPlayer+MGSeekSmoothly.h"
 #import "MGEidtCoverConst.h"
-#import "GTVideoTool.h"
+#import "MGVideoPlayHelper.h"
 
 typedef NS_ENUM(NSInteger, MGLocalVideoPlayerViewState) {
     MGLocalVideoPlayerViewStatePlaying = 0,   //播放中
@@ -77,7 +77,7 @@ typedef NS_ENUM(NSInteger, MGLocalVideoPlayerViewState) {
             self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
             [self.layer addSublayer:self.playerLayer];
             
-            self.videoDuration = [GTVideoTool videoDurationFromVideoPath:self.videoPath];
+            self.videoDuration = [MGVideoPlayHelper videoDurationFromVideoPath:self.videoPath];
             self.videoEndTime = self.videoDuration;
             [self addPlayerPeriodicTimeObserver];
         }
