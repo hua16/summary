@@ -24,7 +24,6 @@
 		E5D3E39B227E9C100078EA68 /* MGCoverImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5D3E386227E9C100078EA68 /* MGCoverImageCollectionViewCell.xib */; };
 		E5D3E39C227E9C100078EA68 /* MGCoverImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E388227E9C100078EA68 /* MGCoverImageCollectionViewCell.m */; };
 		E5D3E39D227E9C100078EA68 /* AVPlayer+MGSeekSmoothly.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E38D227E9C100078EA68 /* AVPlayer+MGSeekSmoothly.m */; };
-		E5D3E39E227E9C100078EA68 /* GTVideoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E38E227E9C100078EA68 /* GTVideoTool.m */; };
 		E5D3E39F227E9C100078EA68 /* MGVideoPlayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E38F227E9C100078EA68 /* MGVideoPlayHelper.m */; };
 		E5D3E3A0227E9C100078EA68 /* MGAIEditCoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3E394227E9C100078EA68 /* MGAIEditCoverViewController.m */; };
 		E5D3E3A1227E9C100078EA68 /* MGAIEditCoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5D3E396227E9C100078EA68 /* MGAIEditCoverViewController.xib */; };
@@ -80,10 +79,8 @@
 		E5D3E389227E9C100078EA68 /* MGVideoDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGVideoDisplayView.h; sourceTree = "<group>"; };
 		E5D3E38C227E9C100078EA68 /* MGEidtCoverConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGEidtCoverConst.h; sourceTree = "<group>"; };
 		E5D3E38D227E9C100078EA68 /* AVPlayer+MGSeekSmoothly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVPlayer+MGSeekSmoothly.m"; sourceTree = "<group>"; };
-		E5D3E38E227E9C100078EA68 /* GTVideoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTVideoTool.m; sourceTree = "<group>"; };
 		E5D3E38F227E9C100078EA68 /* MGVideoPlayHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGVideoPlayHelper.m; sourceTree = "<group>"; };
 		E5D3E390227E9C100078EA68 /* AVPlayer+MGSeekSmoothly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayer+MGSeekSmoothly.h"; sourceTree = "<group>"; };
-		E5D3E391227E9C100078EA68 /* GTVideoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTVideoTool.h; sourceTree = "<group>"; };
 		E5D3E392227E9C100078EA68 /* MGVideoPlayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGVideoPlayHelper.h; sourceTree = "<group>"; };
 		E5D3E394227E9C100078EA68 /* MGAIEditCoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAIEditCoverViewController.m; sourceTree = "<group>"; };
 		E5D3E395227E9C100078EA68 /* MGAIEditCoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAIEditCoverViewController.h; sourceTree = "<group>"; };
@@ -220,13 +217,11 @@
 		E5D3E38B227E9C100078EA68 /* Assist */ = {
 			isa = PBXGroup;
 			children = (
-				E5D3E38C227E9C100078EA68 /* MGEidtCoverConst.h */,
-				E5D3E38D227E9C100078EA68 /* AVPlayer+MGSeekSmoothly.m */,
-				E5D3E38E227E9C100078EA68 /* GTVideoTool.m */,
-				E5D3E38F227E9C100078EA68 /* MGVideoPlayHelper.m */,
 				E5D3E390227E9C100078EA68 /* AVPlayer+MGSeekSmoothly.h */,
-				E5D3E391227E9C100078EA68 /* GTVideoTool.h */,
+				E5D3E38D227E9C100078EA68 /* AVPlayer+MGSeekSmoothly.m */,
+				E5D3E38C227E9C100078EA68 /* MGEidtCoverConst.h */,
 				E5D3E392227E9C100078EA68 /* MGVideoPlayHelper.h */,
+				E5D3E38F227E9C100078EA68 /* MGVideoPlayHelper.m */,
 			);
 			path = Assist;
 			sourceTree = "<group>";
@@ -417,7 +412,6 @@
 				E5D3E39A227E9C100078EA68 /* MGLocalVideoPlayerView.m in Sources */,
 				E5D3E398227E9C100078EA68 /* MGEffectFooterView.m in Sources */,
 				E5D3E39C227E9C100078EA68 /* MGCoverImageCollectionViewCell.m in Sources */,
-				E5D3E39E227E9C100078EA68 /* GTVideoTool.m in Sources */,
 				E5D3E39F227E9C100078EA68 /* MGVideoPlayHelper.m in Sources */,
 				E5D3E39D227E9C100078EA68 /* AVPlayer+MGSeekSmoothly.m in Sources */,
 				E5D3E32A227E7CCF0078EA68 /* AppDelegate.m in Sources */,
