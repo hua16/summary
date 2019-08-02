@@ -10,7 +10,6 @@
 #import "WAAVSEComposition.h"
 #import <UIKit/UIKit.h>
 
-
 @interface WAAVSECommand : NSObject
 
 - (instancetype)initWithComposition:(WAAVSEComposition *)composition;
@@ -35,12 +34,12 @@
  */
 - (void)performAudioCompopsition;
 
- /**
-  计算旋转角度
-  
-  @param transform transForm
-  @return 角度
-  */
+/**
+ 计算旋转角度
+
+ @param transForm transForm
+ @return 角度
+ */
 - (NSUInteger)degressFromTransform:(CGAffineTransform)transForm;
 
 @end

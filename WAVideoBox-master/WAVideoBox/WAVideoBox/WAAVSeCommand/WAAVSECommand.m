@@ -26,16 +26,13 @@
 
 - (instancetype)initWithComposition:(WAAVSEComposition *)composition{
     self = [super init];
-    if(self != nil) {
+    if(self) {
         self.composition = composition;
     }
     return self;
 }
 
-
-- (void)performWithAsset:(AVAsset *)asset
-{
-    
+- (void)performWithAsset:(AVAsset *)asset {
     // 1.1､视频资源的轨道
     if (!self.assetVideoTrack) {
         if ([asset tracksWithMediaType:AVMediaTypeVideo].count != 0) {
@@ -51,7 +48,6 @@
     }
     
     // 2､创建混合器
-  
     if(!self.composition.mutableComposition) {
         
         // 要混合的时间
@@ -84,15 +80,11 @@
         
             [compositionAudioTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, [asset duration]) ofTrack:self.assetAudioTrack atTime:insertionPoint error:&error];
         }
-        
     }
-    
 }
 
-- (void)performVideoCompopsition{
-   
+- (void)performVideoCompopsition {
     if(!self.composition.mutableVideoComposition) {
-        
         self.composition.mutableVideoComposition = [AVMutableVideoComposition videoComposition];
         self.composition.mutableVideoComposition.frameDuration = CMTimeMake(1, 30); // 30 fps
         self.composition.mutableVideoComposition.renderSize = self.assetVideoTrack.naturalSize;
@@ -115,9 +107,7 @@
         }
         
         self.composition.lastInstructionSize = self.composition.mutableComposition.naturalSize  = self.composition.mutableVideoComposition.renderSize;
-        
-    }
-
+    } 
 }
 
 - (void)performAudioCompopsition{
@@ -170,8 +160,6 @@
         return CGAffineTransformIdentity;
     }
 }
-
-
 
 NSString *const WAAVSEExportCommandCompletionNotification = @"WAAVSEExportCommandCompletionNotification";
 NSString* const WAAVSEExportCommandError = @"WAAVSEExportCommandError";

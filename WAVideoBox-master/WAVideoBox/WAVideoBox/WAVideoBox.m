@@ -63,52 +63,45 @@ static void *videoBoxProcessQueueKey = &videoBoxProcessQueueKey;
 NSString *_tmpDirectory;
 
 
-void runSynchronouslyOnVideoBoxProcessingQueue(void (^block)(void))
-{
-    if (dispatch_get_specific(videoBoxProcessQueueKey)){
+void runSynchronouslyOnVideoBoxProcessingQueue(void (^block)(void)) {
+    if (dispatch_get_specific(videoBoxProcessQueueKey)) {
         block();
-    }else{
+    } else {
         dispatch_sync(_videoBoxProcessQueue, block);
     }
 }
 
-void runAsynchronouslyOnVideoBoxProcessingQueue(void (^block)(void))
-{
-    
-    if (dispatch_get_specific(videoBoxProcessQueueKey)){
+void runAsynchronouslyOnVideoBoxProcessingQueue(void (^block)(void)) {
+    if (dispatch_get_specific(videoBoxProcessQueueKey)) {
         block();
     }else{
         dispatch_async(_videoBoxProcessQueue, block);
     }
 }
 
-void runSynchronouslyOnVideoBoxContextQueue(void (^block)(void))
-{
-    if (dispatch_get_specific(videoBoxContextQueueKey)){
+void runSynchronouslyOnVideoBoxContextQueue(void (^block)(void)) {
+    if (dispatch_get_specific(videoBoxContextQueueKey)) {
         block();
-    }else{
+    } else {
         dispatch_sync(_videoBoxContextQueue, block);
     }
 }
 
-void runAsynchronouslyOnVideoBoxContextQueue(void (^block)(void))
-{
+void runAsynchronouslyOnVideoBoxContextQueue(void (^block)(void)) {
     if (dispatch_get_specific(videoBoxContextQueueKey)){
         block();
-    }else{
+    } else {
         dispatch_async(_videoBoxContextQueue, block);
     }
 }
 
 @implementation WAVideoBox
 
-
-+ (void)initialize{
++ (void)initialize {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _tmpDirectory = [NSTemporaryDirectory() stringByAppendingPathComponent:@"WAVideoBoxTmp"];
       
-        
         _videoBoxContextQueue = dispatch_queue_create("VideoBoxContextQueue", DISPATCH_QUEUE_SERIAL);
         dispatch_queue_set_specific(_videoBoxContextQueue, videoBoxContextQueueKey, &videoBoxContextQueueKey, NULL);
         
@@ -122,38 +115,37 @@ void runAsynchronouslyOnVideoBoxContextQueue(void (^block)(void))
 }
 
 #pragma mark life cycle
-- (instancetype)init{
+
+- (instancetype)init {
     self = [super init];
-    
-    self.videoQuality = 0;
-    self.ratio = WAVideoExportRatio960x540;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(AVEditorNotification:) name:WAAVSEExportCommandCompletionNotification object:nil];
-    
+    if (self) {
+        self.videoQuality = 0;
+        self.ratio = WAVideoExportRatio960x540;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(AVEditorNotification:) name:WAAVSEExportCommandCompletionNotification object:nil];
+    }
     return self;
 }
 
 - (void)dealloc{
-    if (self.isSuspend) {
+    if (_suspend) {
         dispatch_resume(_videoBoxContextQueue);
     }
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-#pragma mark pubilc method
-#pragma mark 资源
-- (BOOL)appendVideoByPath:(NSString *)videoPath{
-    
-    if (videoPath.length == 0 ) {
+#pragma mark - pubilc method
+
+- (BOOL)appendVideoByPath:(NSString *)videoPath {
+    BOOL isFileExist = [[NSFileManager defaultManager] fileExistsAtPath:videoPath];
+    if (!isFileExist) {
         return NO;
     }
     
     AVAsset *asset = [AVAsset assetWithURL:[NSURL fileURLWithPath:videoPath]];
     return [self appendVideoByAsset:asset];
-    
 }
 
-- (BOOL)appendVideoByAsset:(AVAsset *)videoAsset{
-    
+- (BOOL)appendVideoByAsset:(AVAsset *)videoAsset {
     if (!videoAsset || !videoAsset.playable) {
         return NO;
     }
@@ -167,7 +159,7 @@ void runAsynchronouslyOnVideoBoxContextQueue(void (^block)(void))
         [self commitCompostionToComposespace];
         
         if (!self.cacheComposition) {
-            self.cacheComposition = [WAAVSEComposition new];
+            self.cacheComposition = [[WAAVSEComposition alloc] init];
             self.cacheComposition.presetName = self.presetName;
             self.cacheComposition.videoQuality = self.videoQuality;
             WAAVSECommand *command = [[WAAVSECommand alloc] initWithComposition:self.cacheComposition];
@@ -176,23 +168,16 @@ void runAsynchronouslyOnVideoBoxContextQueue(void (^block)(void))
             WAAVSEVideoMixCommand *mixcommand = [[WAAVSEVideoMixCommand alloc] initWithComposition:self.cacheComposition];
             [mixcommand performWithAsset:self.cacheComposition.mutableComposition mixAsset:videoAsset];
         }
-        
     });
     return YES;
 }
 
-- (void)commit{
-    
+- (void)commit {
     runAsynchronouslyOnVideoBoxContextQueue(^{
-  
         [self.workSpace insertObjects:self.composeSpace atIndexes:[[NSIndexSet alloc] initWithIndexesInRange:NSMakeRange(0, self.composeSpace.count)]];
-        
         [self.composeSpace removeAllObjects];
-        
         [self commitCompostionToWorkspace];
-        
     });
-    
 }
 
 #pragma mark 裁剪
@@ -213,9 +198,7 @@ void runAsynchronouslyOnVideoBoxContextQueue(void (^block)(void))
 }
 
 - (BOOL)rangeVideoByTimeRange:(CMTimeRange)range{
-    
     runAsynchronouslyOnVideoBoxContextQueue(^{
-
         [self commitCompostionToWorkspace];
         
         for (WAAVSEComposition *composition in self.workSpace) {
@@ -471,15 +454,12 @@ void runAsynchronouslyOnVideoBoxContextQueue(void (^block)(void))
 }
 
 - (void)clean{
-    
     runAsynchronouslyOnVideoBoxContextQueue(^{
         [self __internalClean];
     });
-
 }
 
-- (void)__internalClean{
-    
+- (void)__internalClean{ 
     for (NSString *tmpPath in self.tmpVideoSpace) {
         if ([[NSFileManager defaultManager] fileExistsAtPath:tmpPath]) {
             [[NSFileManager defaultManager] removeItemAtPath:tmpPath error:nil];
@@ -499,8 +479,7 @@ void runAsynchronouslyOnVideoBoxContextQueue(void (^block)(void))
     }
     self.filePath = nil;
     self.tmpPath = nil;
-    self.directCompostionIndex = 0;
-    
+    self.directCompostionIndex = 0; 
 }
 
 #pragma mark private
